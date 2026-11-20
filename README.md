@@ -2,13 +2,18 @@
 
 The model-optimization component of [AI6103-group-project](https://github.com/Yuxiang5555/AI6103-group-project): an experimental study of residual option scoring, option centering, interaction gating, and LoRA adaptation for the English UniMC ALBERT model.
 
-This repository contains the model-optimization part of the project: implementation, CPU contract tests, Slurm recipes, source-development results, and diagnostic reports. Calibration/rejection fitting and final independent-target evaluation are separate downstream tasks.
+The final v0.3 decision-layer confidence-calibration deliverable is available in
+[calibration/README.md](calibration/README.md). It includes source-only global
+temperature fitting, ECE/NLL/Brier tables, reliability diagrams, and an
+[English methods and results report](calibration/results/report.md).
+
+This repository contains model implementations, CPU contract tests, Slurm recipes, experimental results, and diagnostic reports. The final v0.3 decision-layer evaluation is in `unimc_decision_layers/`, and its confidence calibration is in `calibration/`.
 
 The [aggregate evaluation protocol and runner](aggregate_eval/README.md) prepare four held-out target tasks and paired option perturbations for the fixed model comparison.
 
 ## Current evidence
 
-All reported accuracy results use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
+The `unimc_model_optimization/` accuracy results in this section use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
 
 | Method | Seeds | Source macro accuracy | Seed SD (percentage points) | Difference from baseline (pp) |
 |---|---|---:|---:|---:|
@@ -37,6 +42,8 @@ Centering itself uses all candidates in a question. Accordingly, the centered se
 AI6103-group-project/
 ├── README.md                    One project overview and entry point
 ├── .github/                     CPU test workflow
+├── calibration/                 Final decision-layer temperature calibration and results
+├── unimc_decision_layers/        Final v0.3 decision-layer experiments and target evaluation
 └── unimc_model_optimization/
     ├── *.py                     Byte-preserved model and experiment implementations
     ├── docs/
@@ -45,6 +52,7 @@ AI6103-group-project/
     │   ├── HISTORICAL_RUN_GUIDE_ZH.md
     │   └── figures/
     ├── results/                 JSON/CSV evidence and provenance
+    ├── models/                  24 audited small heads/adapters and a checksum manifest
     ├── tests/                   CPU contract tests
     ├── slurm/                   Batch templates
     ├── tools/                   Pinned backbone download
@@ -59,7 +67,9 @@ describe distinct minimal-CPU and legacy-UniMC environments.
 
 Original Python implementation files inside `unimc_model_optimization/` retain their exact research-run bytes, including line endings, because checkpoints and feature caches verify implementation hashes. `.gitattributes` prevents Git from silently normalizing Python files. Only an optional test's private workstation fallback was replaced with `FENGSHEN_ROOT`. Slurm working-directory/log settings and historical notes were made portable. Changes are recorded in [source provenance](unimc_model_optimization/results/source_provenance.json).
 
-Weights, feature caches, raw/prepared datasets, predictions, and private handoff archives are excluded from normal Git tracking. The repository is a source-and-evidence release, not a copy of an entire server account or the third-party backbone.
+The [trained-module folder](unimc_model_optimization/models/README.md) contains 24 audited small checkpoints (about 6.37 MB total): 18 residual heads, three interaction-Gate heads, and initial/best/final seed42 LoRA adapters. The three centered-full heads are the main candidates. SHA256 digests, feature signatures, epochs, and validation metrics are recorded in [the model manifest](unimc_model_optimization/models/manifest.json).
+
+Original UniMC backbone weights, feature caches, raw/prepared datasets, predictions, and private handoff archives remain excluded from normal Git tracking. These small module files still require the matching external backbone and representation pipeline for inference.
 
 ## Quick start: CPU checks
 
@@ -102,7 +112,7 @@ For Slurm, submit from `unimc_model_optimization/` after `mkdir -p logs`. Templa
 - [Results, negative findings, and planned work](unimc_model_optimization/docs/TECHNICAL_REPORT.md#source-development-results)
 - [GitHub upload instructions in Chinese](unimc_model_optimization/docs/OPERATIONS.md#github-publication-instructions)
 
-The proposed learning-rate comparison (`1e-4` versus `1e-5`, otherwise fixed settings) has **not** been run in the evidence included here. Independent-target, calibration, and no-answer rejection results are also not included.
+The proposed learning-rate comparison (`1e-4` versus `1e-5`, otherwise fixed settings) has **not** been run in the evidence included here. The `unimc_model_optimization/` reports cover source-development experiments. The final v0.3 decision-layer target evaluation and confidence-calibration results are provided in `unimc_decision_layers/` and `calibration/`.
 
 ## Upstream resources and licensing status
 

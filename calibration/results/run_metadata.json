@@ -1,0 +1,33 @@
+{
+  "repository_commit": "b170b3b83df1758dcd7e752a210750f5ca1d2624",
+  "input_manifest_sha256": "230396e3f3a517e5be2689759f236c6ffa06b18209885b481d66565614586054",
+  "implementation_sha256": {
+    "run_calibration.py": "79a76071275975df258e431e1ba9a63427c60faa873954a2ccdc7f3e458ce2aa",
+    "temperature_scaling.py": "0d104bb3464139fb063024ddb86e76fe4e4e3679b5fbbefcc9e6ad872a5d2a9f",
+    "plot_results.py": "4972dc5f5d38c63d30e64f7e02df2b6f1597c7a5ddee63ede0963a458798b3ca"
+  },
+  "protocol": {
+    "ece_bins": 15,
+    "ece_bin_intervals": "right-closed, zero included in first bin",
+    "brier": "sum over valid classes, example mean, range [0,2]",
+    "fit_objective": "pooled source-calibration example-mean natural-log NLL",
+    "source_datasets": [
+      "arc_c",
+      "csqa",
+      "obqa",
+      "piqa"
+    ],
+    "target_datasets": [
+      "sst2",
+      "cb",
+      "copa",
+      "hellaswag"
+    ],
+    "target_aggregation": "equal task weights, then training-seed mean and sample SD",
+    "seed_sd_ddof": 1,
+    "baseline_repetitions": 1
+  },
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "mode": "source-only temperature fitting"
+}

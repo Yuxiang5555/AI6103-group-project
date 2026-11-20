@@ -34,7 +34,6 @@ Thumbs.db
 
 # Component runtime artifacts and external siblings
 /Fengshenbang-LM-main/
-/unimc_model_optimization/models/
 /unimc_model_optimization/cache/
 /unimc_model_optimization/raw/
 /unimc_model_optimization/data/*
@@ -46,3 +45,40 @@ Thumbs.db
 !/unimc_model_optimization/logs/.gitkeep
 /unimc_model_optimization/output/
 !/unimc_model_optimization/examples/*.jsonl
+
+# Audited small module checkpoints; other model files stay ignored
+/unimc_model_optimization/models/*
+!/unimc_model_optimization/models/README.md
+!/unimc_model_optimization/models/manifest.json
+!/unimc_model_optimization/models/heads/
+/unimc_model_optimization/models/heads/*
+!/unimc_model_optimization/models/gate/
+/unimc_model_optimization/models/gate/*
+!/unimc_model_optimization/models/lora/
+/unimc_model_optimization/models/lora/*
+!/unimc_model_optimization/models/lora/seed42/
+/unimc_model_optimization/models/lora/seed42/*
+!/unimc_model_optimization/models/heads/centered_full_seed42.pt
+!/unimc_model_optimization/models/heads/centered_full_seed43.pt
+!/unimc_model_optimization/models/heads/centered_full_seed44.pt
+!/unimc_model_optimization/models/heads/centered_mlp_seed42.pt
+!/unimc_model_optimization/models/heads/centered_mlp_seed43.pt
+!/unimc_model_optimization/models/heads/centered_mlp_seed44.pt
+!/unimc_model_optimization/models/heads/centered_self_seed42.pt
+!/unimc_model_optimization/models/heads/centered_self_seed43.pt
+!/unimc_model_optimization/models/heads/centered_self_seed44.pt
+!/unimc_model_optimization/models/heads/uncentered_full_seed42.pt
+!/unimc_model_optimization/models/heads/uncentered_full_seed43.pt
+!/unimc_model_optimization/models/heads/uncentered_full_seed44.pt
+!/unimc_model_optimization/models/heads/uncentered_mlp_seed42.pt
+!/unimc_model_optimization/models/heads/uncentered_mlp_seed43.pt
+!/unimc_model_optimization/models/heads/uncentered_mlp_seed44.pt
+!/unimc_model_optimization/models/heads/uncentered_self_seed42.pt
+!/unimc_model_optimization/models/heads/uncentered_self_seed43.pt
+!/unimc_model_optimization/models/heads/uncentered_self_seed44.pt
+!/unimc_model_optimization/models/gate/gated_seed42.pt
+!/unimc_model_optimization/models/gate/gated_seed43.pt
+!/unimc_model_optimization/models/gate/gated_seed44.pt
+!/unimc_model_optimization/models/lora/seed42/initial_adapter.pt
+!/unimc_model_optimization/models/lora/seed42/best_adapter.pt
+!/unimc_model_optimization/models/lora/seed42/last_adapter.pt

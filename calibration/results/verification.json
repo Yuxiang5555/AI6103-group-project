@@ -1,0 +1,365 @@
+{
+  "passed": true,
+  "numeric_regression_tests": {
+    "passed": 9,
+    "failed": 0,
+    "command": "python -m unittest discover -s calibration/tests -v"
+  },
+  "independent_numeric_audit": {
+    "passed": true,
+    "method": "Independent per-record direct softmax/log-normalizer, one-hot Brier and explicit interval ECE; no production calibration imports",
+    "selected_target_metric_rows_checked": 16,
+    "selected_target_metrics": [
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "sst2",
+        "stage": "before",
+        "n": 872,
+        "maximum_absolute_metric_error": 1.942890293094024e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "sst2",
+        "stage": "after",
+        "n": 872,
+        "maximum_absolute_metric_error": 4.440892098500626e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "cb",
+        "stage": "before",
+        "n": 56,
+        "maximum_absolute_metric_error": 2.220446049250313e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "cb",
+        "stage": "after",
+        "n": 56,
+        "maximum_absolute_metric_error": 3.3306690738754696e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "copa",
+        "stage": "before",
+        "n": 100,
+        "maximum_absolute_metric_error": 4.440892098500626e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "copa",
+        "stage": "after",
+        "n": 100,
+        "maximum_absolute_metric_error": 3.3306690738754696e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "hellaswag",
+        "stage": "before",
+        "n": 10042,
+        "maximum_absolute_metric_error": 1.1102230246251565e-16
+      },
+      {
+        "model": "unimc",
+        "seed": null,
+        "dataset": "hellaswag",
+        "stage": "after",
+        "n": 10042,
+        "maximum_absolute_metric_error": 4.163336342344337e-17
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "sst2",
+        "stage": "before",
+        "n": 872,
+        "maximum_absolute_metric_error": 2.7755575615628914e-17
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "sst2",
+        "stage": "after",
+        "n": 872,
+        "maximum_absolute_metric_error": 1.1102230246251565e-16
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "cb",
+        "stage": "before",
+        "n": 56,
+        "maximum_absolute_metric_error": 1.1102230246251565e-16
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "cb",
+        "stage": "after",
+        "n": 56,
+        "maximum_absolute_metric_error": 1.3877787807814457e-16
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "copa",
+        "stage": "before",
+        "n": 100,
+        "maximum_absolute_metric_error": 8.326672684688674e-17
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "copa",
+        "stage": "after",
+        "n": 100,
+        "maximum_absolute_metric_error": 4.440892098500626e-16
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "hellaswag",
+        "stage": "before",
+        "n": 10042,
+        "maximum_absolute_metric_error": 1.1102230246251565e-16
+      },
+      {
+        "model": "tf_int",
+        "seed": 0,
+        "dataset": "hellaswag",
+        "stage": "after",
+        "n": 10042,
+        "maximum_absolute_metric_error": 2.7755575615628914e-17
+      }
+    ],
+    "maximum_absolute_metric_errors": {
+      "accuracy": 0.0,
+      "nll": 3.3306690738754696e-16,
+      "brier": 2.220446049250313e-16,
+      "ece": 3.3306690738754696e-16,
+      "mean_confidence": 4.440892098500626e-16
+    },
+    "fitted_temperatures_checked": 13,
+    "maximum_absolute_calibration_gradient_beta": 1.577494108475753e-11,
+    "all_small_T_perturbations_nonimproving": true,
+    "fit_checks": [
+      {
+        "fit": "unimc",
+        "n": 3193,
+        "temperature": 0.9171801940121688,
+        "independent_nll": 0.5891256365275203,
+        "analytic_gradient_beta": 7.315777381529781e-12,
+        "nll_at_T_times_0_999": 0.5891258128364207,
+        "nll_at_T_times_1_001": 0.5891258123930669,
+        "smallest_perturbation_nll_increase": 1.7586554668103105e-07
+      },
+      {
+        "fit": "mlp/seed0",
+        "n": 3193,
+        "temperature": 1.144004035623306,
+        "independent_nll": 0.580869917937546,
+        "analytic_gradient_beta": -1.3156257306393042e-11,
+        "nll_at_T_times_0_999": 0.5808701162448513,
+        "nll_at_T_times_1_001": 0.5808701157405578,
+        "smallest_perturbation_nll_increase": 1.9780301174776582e-07
+      },
+      {
+        "fit": "mlp/seed1",
+        "n": 3193,
+        "temperature": 1.0685558508907487,
+        "independent_nll": 0.5727185833899422,
+        "analytic_gradient_beta": -1.561813433914107e-11,
+        "nll_at_T_times_0_999": 0.5727187776249724,
+        "nll_at_T_times_1_001": 0.5727187771349902,
+        "smallest_perturbation_nll_increase": 1.937450480049563e-07
+      },
+      {
+        "fit": "mlp/seed2",
+        "n": 3193,
+        "temperature": 1.017503158005827,
+        "independent_nll": 0.5764227039093844,
+        "analytic_gradient_beta": -2.7211327807726416e-12,
+        "nll_at_T_times_0_999": 0.5764228974937721,
+        "nll_at_T_times_1_001": 0.5764228970048776,
+        "smallest_perturbation_nll_increase": 1.9309549315060792e-07
+      },
+      {
+        "fit": "tf_noint/seed0",
+        "n": 3193,
+        "temperature": 1.131084332595487,
+        "independent_nll": 0.5759032325897719,
+        "analytic_gradient_beta": 1.323060393191881e-13,
+        "nll_at_T_times_0_999": 0.5759034407372123,
+        "nll_at_T_times_1_001": 0.5759034402056119,
+        "smallest_perturbation_nll_increase": 2.0761583996442567e-07
+      },
+      {
+        "fit": "tf_noint/seed1",
+        "n": 3193,
+        "temperature": 1.101591077531045,
+        "independent_nll": 0.5734302155800087,
+        "analytic_gradient_beta": 1.577494108475753e-11,
+        "nll_at_T_times_0_999": 0.5734304163860728,
+        "nll_at_T_times_1_001": 0.5734304158775954,
+        "smallest_perturbation_nll_increase": 2.0029758662776231e-07
+      },
+      {
+        "fit": "tf_noint/seed2",
+        "n": 3193,
+        "temperature": 1.121948837370062,
+        "independent_nll": 0.5792397548915625,
+        "analytic_gradient_beta": 1.2737701348500736e-11,
+        "nll_at_T_times_0_999": 0.5792399527403499,
+        "nll_at_T_times_1_001": 0.5792399522395617,
+        "smallest_perturbation_nll_increase": 1.9734799916459878e-07
+      },
+      {
+        "fit": "tf_int/seed0",
+        "n": 3193,
+        "temperature": 1.131948364618206,
+        "independent_nll": 0.5768115967741304,
+        "analytic_gradient_beta": 2.6835260881231652e-12,
+        "nll_at_T_times_0_999": 0.5768117924944146,
+        "nll_at_T_times_1_001": 0.5768117919992493,
+        "smallest_perturbation_nll_increase": 1.952251188486187e-07
+      },
+      {
+        "fit": "tf_int/seed1",
+        "n": 3193,
+        "temperature": 1.123696678257785,
+        "independent_nll": 0.5760876351385031,
+        "analytic_gradient_beta": -2.249409622621079e-12,
+        "nll_at_T_times_0_999": 0.5760878333480637,
+        "nll_at_T_times_1_001": 0.5760878328451828,
+        "smallest_perturbation_nll_increase": 1.9770667969432054e-07
+      },
+      {
+        "fit": "tf_int/seed2",
+        "n": 3193,
+        "temperature": 1.1873122470008934,
+        "independent_nll": 0.5739345274606479,
+        "analytic_gradient_beta": -5.9149099996611575e-12,
+        "nll_at_T_times_0_999": 0.5739347376997369,
+        "nll_at_T_times_1_001": 0.5739347371629812,
+        "smallest_perturbation_nll_increase": 2.0970233327588517e-07
+      },
+      {
+        "fit": "tf_gate/seed0",
+        "n": 3193,
+        "temperature": 1.0900686379573048,
+        "independent_nll": 0.5768557436115347,
+        "analytic_gradient_beta": -1.395545988683459e-11,
+        "nll_at_T_times_0_999": 0.576855937706947,
+        "nll_at_T_times_1_001": 0.5768559372166832,
+        "smallest_perturbation_nll_increase": 1.9360514846855637e-07
+      },
+      {
+        "fit": "tf_gate/seed1",
+        "n": 3193,
+        "temperature": 1.1236071297618428,
+        "independent_nll": 0.5748240111687125,
+        "analytic_gradient_beta": 1.4724003204695697e-11,
+        "nll_at_T_times_0_999": 0.5748242082923274,
+        "nll_at_T_times_1_001": 0.5748242077948746,
+        "smallest_perturbation_nll_increase": 1.9662616213000916e-07
+      },
+      {
+        "fit": "tf_gate/seed2",
+        "n": 3193,
+        "temperature": 1.1581746453609225,
+        "independent_nll": 0.5810763885911693,
+        "analytic_gradient_beta": 5.00779082050152e-13,
+        "nll_at_T_times_0_999": 0.5810765902377409,
+        "nll_at_T_times_1_001": 0.5810765897250122,
+        "smallest_perturbation_nll_increase": 2.011338429142029e-07
+      }
+    ]
+  },
+  "frozen_temperature_replay": {
+    "passed": true,
+    "files": {
+      "temperatures.json": {
+        "sha256": "7a6be2ed9a1493c6f668dfef72b0574739f0b56e9186f72fc02f02e175e2fe6b",
+        "replay_identical": true
+      },
+      "metrics.csv": {
+        "sha256": "0a093d8a6c237feacf102e45e44f656d4d592abb34f928d41ec6094574e9de2e",
+        "replay_identical": true
+      },
+      "metrics.json": {
+        "sha256": "09522c881709862f2921aad17b35099d8f270f31981ac43b5892bbc270f678ec",
+        "replay_identical": true
+      },
+      "target_macro_by_seed.csv": {
+        "sha256": "5cfb366ca23e7fbfc1deb61e965fbb0a2e214f2da730c7a5908f09ca167d6be1",
+        "replay_identical": true
+      },
+      "target_macro_summary.csv": {
+        "sha256": "39f6bf43bb4d72ce4a5e921ab24dfa6894e86f5a6a1107f8ebd80529cb0a619d",
+        "replay_identical": true
+      },
+      "per_dataset_summary.csv": {
+        "sha256": "089ad1eec7312ff48351e7cbf868ddd266af278f4f381ea94d37366aada5c69d",
+        "replay_identical": true
+      },
+      "reliability_bins.csv": {
+        "sha256": "f86fa8afcfa86e31f5357f71b3d7e42b00959cc5fbc6e4bd5f8550c176176832",
+        "replay_identical": true
+      },
+      "report.md": {
+        "sha256": "42895566af26e6c9ce666ef11fa243dd88690f051b0f38e50b440f83ab7ccf8e",
+        "replay_identical": true
+      },
+      "figures/reliability_mlp.png": {
+        "sha256": "6c0d133ca803880c87b219423f827033f2c51c42bee00bfec0e0fbb191a4221f",
+        "replay_identical": true
+      },
+      "figures/reliability_tf_gate.png": {
+        "sha256": "a4d95c57e3c3096cf311b9d6d25300930df978b6caf3eb1b03006213f5d552cf",
+        "replay_identical": true
+      },
+      "figures/reliability_tf_int.png": {
+        "sha256": "6ef65765c19aff6cc905d651173c5fdc303304459a353a4639722168b1a29ed3",
+        "replay_identical": true
+      },
+      "figures/reliability_tf_noint.png": {
+        "sha256": "a9e31aca2db957ffec5a6422bb99db7aad8d3ee185545f75e021797898a331ad",
+        "replay_identical": true
+      },
+      "figures/reliability_unimc.png": {
+        "sha256": "34b82bbe1d825076e50c5c304d147128be6ace32bd153f2a559c50a28757d3da",
+        "replay_identical": true
+      },
+      "figures/target_metrics.png": {
+        "sha256": "33b55e09f3a5302e44ebbc1889ed04cc8d5c414b064f613ee3ddc21741919a8a",
+        "replay_identical": true
+      }
+    }
+  },
+  "checkpoint_identity_negative_check": {
+    "passed": true,
+    "expected_rejection": "Frozen temperature checkpoint differs: mlp/seed0"
+  },
+  "metric_rows": 390,
+  "upload_readiness": {
+    "passed": true,
+    "fresh_copy_contains_only_tracked_and_intended_upload_files": true,
+    "restored_manifest_prediction_files": 168,
+    "numeric_regression_tests_passed": 9,
+    "recomputed_metric_rows": 390,
+    "release_result_files_reproduced_identically": 14,
+    "new_run_removed_previous_verification_record": true,
+    "implementation_sha256": {
+      "run_calibration.py": "79a76071275975df258e431e1ba9a63427c60faa873954a2ccdc7f3e458ce2aa",
+      "temperature_scaling.py": "0d104bb3464139fb063024ddb86e76fe4e4e3679b5fbbefcc9e6ad872a5d2a9f",
+      "plot_results.py": "4972dc5f5d38c63d30e64f7e02df2b6f1597c7a5ddee63ede0963a458798b3ca"
+    }
+  }
+}

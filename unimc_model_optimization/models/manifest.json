@@ -1,0 +1,976 @@
+{
+  "collection": "Audited small trained modules for unimc_model_optimization",
+  "prepared_date": "2026-11-20",
+  "backbone_repo": "IDEA-CCNL/Erlangshen-UniMC-Albert-235M-English",
+  "backbone_revision": "e3aeebc7bd475d559bd0cbd8d17abf4e159d1260",
+  "backbone_weights_included": false,
+  "scope": "Source-development checkpoints; no claim of independent-target improvement",
+  "checkpoint_count": 24,
+  "total_checkpoint_bytes": 6371568,
+  "primary_files": [
+    "heads/centered_full_seed42.pt",
+    "heads/centered_full_seed43.pt",
+    "heads/centered_full_seed44.pt"
+  ],
+  "feature_signatures": {
+    "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909": {
+      "hidden_dim": 128,
+      "weights_sha256": {
+        "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+      },
+      "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+      "tokenizer_sha256": {
+        "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+        "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+      },
+      "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+      "max_length": 512,
+      "amp": "none",
+      "cached_hidden_dtype": "float32",
+      "yes_token": 1643,
+      "allow_option_truncation": true,
+      "option_representation": {
+        "kind": "frozen_official_mlm_predecoder_v1",
+        "official_mlm_class_sha256": "39de71d5e92f4bebf77a4c2cc29f16b7ac59e417ed77de8e81d7998414443f6b",
+        "converter_sha256": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a",
+        "parent_feature_signature": {
+          "hidden_dim": 4096,
+          "weights_sha256": {
+            "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+          },
+          "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+          "tokenizer_sha256": {
+            "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+            "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+          },
+          "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+          "max_length": 512,
+          "amp": "none",
+          "cached_hidden_dtype": "float16",
+          "yes_token": 1643,
+          "allow_option_truncation": true
+        },
+        "parent_cached_hidden_dtype": "float16"
+      },
+      "option_centering": {
+        "kind": "subtract_mean_over_actual_options_v1",
+        "converter_sha256": "a5b5c316855f8c1b930c59505a4b50efc1ee435ce8739dad4c37364c3f0b32ae",
+        "parent_feature_signature": {
+          "hidden_dim": 128,
+          "weights_sha256": {
+            "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+          },
+          "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+          "tokenizer_sha256": {
+            "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+            "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+          },
+          "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+          "max_length": 512,
+          "amp": "none",
+          "cached_hidden_dtype": "float16",
+          "yes_token": 1643,
+          "allow_option_truncation": true,
+          "option_representation": {
+            "kind": "frozen_official_mlm_predecoder_v1",
+            "official_mlm_class_sha256": "39de71d5e92f4bebf77a4c2cc29f16b7ac59e417ed77de8e81d7998414443f6b",
+            "converter_sha256": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a",
+            "parent_feature_signature": {
+              "hidden_dim": 4096,
+              "weights_sha256": {
+                "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+              },
+              "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+              "tokenizer_sha256": {
+                "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+                "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+              },
+              "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+              "max_length": 512,
+              "amp": "none",
+              "cached_hidden_dtype": "float16",
+              "yes_token": 1643,
+              "allow_option_truncation": true
+            },
+            "parent_cached_hidden_dtype": "float16"
+          }
+        }
+      }
+    },
+    "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2": {
+      "hidden_dim": 128,
+      "weights_sha256": {
+        "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+      },
+      "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+      "tokenizer_sha256": {
+        "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+        "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+      },
+      "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+      "max_length": 512,
+      "amp": "none",
+      "cached_hidden_dtype": "float16",
+      "yes_token": 1643,
+      "allow_option_truncation": true,
+      "option_representation": {
+        "kind": "frozen_official_mlm_predecoder_v1",
+        "official_mlm_class_sha256": "39de71d5e92f4bebf77a4c2cc29f16b7ac59e417ed77de8e81d7998414443f6b",
+        "converter_sha256": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a",
+        "parent_feature_signature": {
+          "hidden_dim": 4096,
+          "weights_sha256": {
+            "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+          },
+          "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+          "tokenizer_sha256": {
+            "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+            "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+          },
+          "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+          "max_length": 512,
+          "amp": "none",
+          "cached_hidden_dtype": "float16",
+          "yes_token": 1643,
+          "allow_option_truncation": true
+        },
+        "parent_cached_hidden_dtype": "float16"
+      }
+    },
+    "24e1488ba666a6ad28749de2226605d703cdd3099bad77cdf2d2513a7408c9aa": {
+      "hidden_dim": 4096,
+      "weights_sha256": {
+        "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+      },
+      "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+      "tokenizer_sha256": {
+        "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+        "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+      },
+      "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+      "max_length": 512,
+      "amp": "none",
+      "cached_hidden_dtype": "float16",
+      "yes_token": 1643,
+      "allow_option_truncation": true
+    }
+  },
+  "files": [
+    {
+      "file": "heads/centered_full_seed42.pt",
+      "sha256": "a77e33b5a56b89519f6a9c25085429f97d3820ed0e3806b078bc641343986d05",
+      "bytes": 242450,
+      "seed": 42,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7653263019116677,
+        "macro_accuracy": 0.7668843551773958,
+        "macro_nll": 0.5793407132405466,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6148054709878167
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 698,
+            "accuracy": 0.7595212187159956,
+            "nll": 0.5438759554932765
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": true,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_full_seed43.pt",
+      "sha256": "9b13fc1c134221b87b71a6879cd2c718709dbc0dd37cb3c720a29c79e2611c5c",
+      "bytes": 242450,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7626895187870798,
+        "macro_accuracy": 0.7647080766137397,
+        "macro_nll": 0.5793341304643955,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6141097834291497
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 694,
+            "accuracy": 0.7551686615886833,
+            "nll": 0.5445584774996414
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": true,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_full_seed44.pt",
+      "sha256": "20b49fe221e885e41428631700b07323dcf9942e5d045862c002e11284a5c6ce",
+      "bytes": 242450,
+      "seed": 44,
+      "epoch": 2,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7626895187870798,
+        "macro_accuracy": 0.7644160258533159,
+        "macro_nll": 0.5789380805724749,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6150022045620908
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 695,
+            "accuracy": 0.7562568008705114,
+            "nll": 0.5428739565828591
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": true,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_mlp_seed42.pt",
+      "sha256": "999592a8a5b20cd1170d2d8f84d4ae88381f6ff08ae08a9619d017913c467343",
+      "bytes": 191966,
+      "seed": 42,
+      "epoch": 2,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7659854976928148,
+        "macro_accuracy": 0.767136374057886,
+        "macro_nll": 0.5791009760468262,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6156124786508754
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 700,
+            "accuracy": 0.7616974972796517,
+            "nll": 0.542589473442777
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_mlp_seed43.pt",
+      "sha256": "d42d0e3f792aa28518905c8af33b5790d6ade17a9169eefaf69dbc8ebc12531c",
+      "bytes": 191966,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7646671061305208,
+        "macro_accuracy": 0.7663402855364818,
+        "macro_nll": 0.5792852694983763,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139681944947966
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 697,
+            "accuracy": 0.7584330794341676,
+            "nll": 0.5446023445019561
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_mlp_seed44.pt",
+      "sha256": "0dbde853c87a2264014c0f5fa13395d5ea335054092321e9b450170219490f0a",
+      "bytes": 191966,
+      "seed": 44,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7580751483190508,
+        "macro_accuracy": 0.7608995891273413,
+        "macro_nll": 0.5794681670843784,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.614421844815887
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 687,
+            "accuracy": 0.7475516866158868,
+            "nll": 0.5445144893528698
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_self_seed42.pt",
+      "sha256": "a6e937214ebaee5f259e40aaa66418d7909e932c71b0e929214b35d36a3a340e",
+      "bytes": 242450,
+      "seed": 42,
+      "epoch": 2,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7633487145682267,
+        "macro_accuracy": 0.7652521462546538,
+        "macro_nll": 0.5786058665539418,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.615353166604912
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 695,
+            "accuracy": 0.7562568008705114,
+            "nll": 0.5418585665029716
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_self_seed43.pt",
+      "sha256": "c9f215e0c4ac27b23c80fd284093ad472b7532fce644ffb382ab57a572c43173",
+      "bytes": 242450,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7633487145682267,
+        "macro_accuracy": 0.7649600954942299,
+        "macro_nll": 0.5794779609036008,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6143837504450158
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 696,
+            "accuracy": 0.7573449401523396,
+            "nll": 0.5445721713621858
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/centered_self_seed44.pt",
+      "sha256": "fcbbcc56f86c2e5a51d11272eca0928659dda70ec3e123a25dc688a01ee13df1",
+      "bytes": 242450,
+      "seed": 44,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7587343441001978,
+        "macro_accuracy": 0.7611516080078318,
+        "macro_nll": 0.5792360899684466,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6145833498201403
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 689,
+            "accuracy": 0.749727965179543,
+            "nll": 0.5438888301167528
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_full_seed42.pt",
+      "sha256": "6cf65978132f3f304bc5c321f6199ff976424c505f6e4e7a91bbf2d8ad3d559b",
+      "bytes": 241938,
+      "seed": 42,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800727680212894,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139624748423962
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5461830612001825
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_full_seed43.pt",
+      "sha256": "acf027b65ea0c98fdbad45e6333fa7098aea176d1d8b6f74253ac31ce0e0c4a0",
+      "bytes": 241938,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800699330254249,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.613946171101034
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5461936949498158
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_full_seed44.pt",
+      "sha256": "104bf730ac81b384ec0f23f59e30403e0e9d4b85f4e230c12803fc7db77c3811",
+      "bytes": 241938,
+      "seed": 44,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800850500676091,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139660174727111
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5462040826625072
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_mlp_seed42.pt",
+      "sha256": "70bb82959824c81698950c7f2a646e0f25d61f72208885437aa1618628f11928",
+      "bytes": 191582,
+      "seed": 42,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800948568487374,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139833926526533
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5462063210448215
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_mlp_seed43.pt",
+      "sha256": "2bf47a83bfa5fc816d9f45d5c49ef4cf207d8d3147348f974814c3518d1daa37",
+      "bytes": 191582,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800875379831816,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139983300430242
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5461767459233389
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_mlp_seed44.pt",
+      "sha256": "a73d6cb076038297256a639800fe7eb5c4187ef632f072113e3d3eb1ef51de04",
+      "bytes": 191582,
+      "seed": 44,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 46209,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7607119314436388,
+        "macro_accuracy": 0.7630758676909976,
+        "macro_nll": 0.5801355448180658,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6140472949852321
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 691,
+            "accuracy": 0.7519042437431991,
+            "nll": 0.5462237946508995
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_self_seed42.pt",
+      "sha256": "91b048e865ef2985a3bb878001748ea6cb9478d0953ba98e00218422922280f6",
+      "bytes": 241938,
+      "seed": 42,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800650388996484,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139613312592834
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5461687465400134
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_self_seed43.pt",
+      "sha256": "9466df4cab25f21b4739125f8925d14e0bb5811b1ffa8d427aaddfc6233a9f42",
+      "bytes": 241938,
+      "seed": 43,
+      "epoch": 4,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7626895187870798,
+        "macro_accuracy": 0.7650001273741635,
+        "macro_nll": 0.5808386865118018,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 464,
+            "accuracy": 0.7759197324414716,
+            "nll": 0.6153120031799897
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.546365369843614
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "heads/uncentered_self_seed44.pt",
+      "sha256": "182642b3cbcd72495f323d22cac28fe1a15dc709d5e99a395233b882687618dc",
+      "bytes": 241938,
+      "seed": 44,
+      "epoch": 1,
+      "model_kind": "residual_option_head",
+      "parameter_count": 58689,
+      "feature_signature_id": "0e53118ca33b4b9afe61b8d5e233a1103a2ee11b7b8997f91590a8b4a84b5ac2",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7613711272247857,
+        "macro_accuracy": 0.7636199373319117,
+        "macro_nll": 0.5801038736417699,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6140175979560377
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 692,
+            "accuracy": 0.7529923830250272,
+            "nll": 0.5461901493275019
+          }
+        }
+      },
+      "source_archive": "UniMC_model_optimization_handoff.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "gate/gated_seed42.pt",
+      "sha256": "0e978e0797d4c66e1e5fd9d1c0e5e03fb925dd59c19fffb7647481fdb91dab90",
+      "bytes": 243212,
+      "seed": 42,
+      "epoch": 2,
+      "model_kind": "self_full_interaction_gate_v1",
+      "parameter_count": 58690,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7633487145682267,
+        "macro_accuracy": 0.7649600954942299,
+        "macro_nll": 0.5787096145207695,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6156506692447227
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 696,
+            "accuracy": 0.7573449401523396,
+            "nll": 0.5417685597968163
+          }
+        }
+      },
+      "source_archive": "UniMC_interaction_gate_results.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "gate/gated_seed43.pt",
+      "sha256": "98083c8054e8e6f47c2f53299bb5c5a5f4de12bc70ec78531ca6918ea2c56b61",
+      "bytes": 243212,
+      "seed": 43,
+      "epoch": 1,
+      "model_kind": "self_full_interaction_gate_v1",
+      "parameter_count": 58690,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7613711272247857,
+        "macro_accuracy": 0.7636199373319117,
+        "macro_nll": 0.5793945446671251,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.614245724730508
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 692,
+            "accuracy": 0.7529923830250272,
+            "nll": 0.5445433646037423
+          }
+        }
+      },
+      "source_archive": "UniMC_interaction_gate_results.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "gate/gated_seed44.pt",
+      "sha256": "614c76bea0ffec4729704bda64e3360fcdc6978bd10b53eada21b3fb7bdc6c57",
+      "bytes": 243212,
+      "seed": 44,
+      "epoch": 2,
+      "model_kind": "self_full_interaction_gate_v1",
+      "parameter_count": 58690,
+      "feature_signature_id": "ac5c748b1e7d136ed156b2e1d57206d3715d63edaeb05d57def098adcb976909",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7626895187870798,
+        "macro_accuracy": 0.7644160258533159,
+        "macro_nll": 0.5788103928056123,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 462,
+            "accuracy": 0.7725752508361204,
+            "nll": 0.6153158282111227
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 695,
+            "accuracy": 0.7562568008705114,
+            "nll": 0.542304957400102
+          }
+        }
+      },
+      "source_archive": "UniMC_interaction_gate_results.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Tensor/shape/code-signature checks; CPU inference smoke passed"
+    },
+    {
+      "file": "lora/seed42/initial_adapter.pt",
+      "sha256": "00484a63ff91a1aa770c29f29c90cfd11349a79af457db6d66de6a3ea147ac7b",
+      "bytes": 528336,
+      "seed": 42,
+      "epoch": 0,
+      "model_kind": "unimc_shared_qv_lora_v1",
+      "parameter_count": 131072,
+      "feature_signature_id": "24e1488ba666a6ad28749de2226605d703cdd3099bad77cdf2d2513a7408c9aa",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7620303230059328,
+        "macro_accuracy": 0.7641640069728257,
+        "macro_nll": 0.5800596779778437,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 463,
+            "accuracy": 0.774247491638796,
+            "nll": 0.6139325798966716
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 693,
+            "accuracy": 0.7540805223068553,
+            "nll": 0.5461867760590159
+          }
+        }
+      },
+      "source_archive": "UniMC_lora_seed42_results.zip",
+      "primary_candidate": false,
+      "role": "initialization reference only",
+      "validation": "Adapter tensor/shape/code-signature checks; no full-backbone replay"
+    },
+    {
+      "file": "lora/seed42/best_adapter.pt",
+      "sha256": "c0c59aa677597de7b07d07f7c9be6144e6d391af07be374584aa7338720fc94e",
+      "bytes": 528312,
+      "seed": 42,
+      "epoch": 1,
+      "model_kind": "unimc_shared_qv_lora_v1",
+      "parameter_count": 131072,
+      "feature_signature_id": "24e1488ba666a6ad28749de2226605d703cdd3099bad77cdf2d2513a7408c9aa",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7593935398813447,
+        "macro_accuracy": 0.7611115761278983,
+        "macro_nll": 0.5798074840070415,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 460,
+            "accuracy": 0.7692307692307693,
+            "nll": 0.6112989975256804
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 692,
+            "accuracy": 0.7529923830250272,
+            "nll": 0.5483159704884025
+          }
+        }
+      },
+      "source_archive": "UniMC_lora_seed42_results.zip",
+      "primary_candidate": false,
+      "role": "source-selected checkpoint",
+      "validation": "Adapter tensor/shape/code-signature checks; no full-backbone replay"
+    },
+    {
+      "file": "lora/seed42/last_adapter.pt",
+      "sha256": "57974f2e6518ca2d055bb3318232d5d04c970fde15bf47c298b11d62727313ff",
+      "bytes": 528312,
+      "seed": 42,
+      "epoch": 2,
+      "model_kind": "unimc_shared_qv_lora_v1",
+      "parameter_count": 131072,
+      "feature_signature_id": "24e1488ba666a6ad28749de2226605d703cdd3099bad77cdf2d2513a7408c9aa",
+      "source_validation": {
+        "n": 1517,
+        "accuracy": 0.7481872116018458,
+        "macro_accuracy": 0.7518623922323596,
+        "macro_nll": 0.5758787419326057,
+        "per_dataset": {
+          "commonsenseqa": {
+            "n": 598,
+            "correct": 460,
+            "accuracy": 0.7692307692307693,
+            "nll": 0.6056666125091091
+          },
+          "piqa": {
+            "n": 919,
+            "correct": 675,
+            "accuracy": 0.73449401523395,
+            "nll": 0.5460908713561023
+          }
+        }
+      },
+      "source_archive": "UniMC_lora_seed42_results.zip",
+      "primary_candidate": false,
+      "role": "final-epoch diagnostic reference",
+      "validation": "Adapter tensor/shape/code-signature checks; no full-backbone replay"
+    }
+  ]
+}
