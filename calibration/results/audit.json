@@ -1,0 +1,24 @@
+{
+  "input_prediction_files": 168,
+  "source_calibration_counts": {
+    "arc_c": 112,
+    "csqa": 974,
+    "obqa": 496,
+    "piqa": 1611
+  },
+  "calibration_validation_overlap": 0,
+  "all_calibration_ids_match_fixed_split": true,
+  "all_prediction_ids_unique": true,
+  "all_labels_and_samples_align_across_runs": true,
+  "all_baseline_logits_identical_across_12_runs": true,
+  "all_saved_predictions_match_logit_argmax": true,
+  "all_counts_and_accuracies_match_published_runs": true,
+  "all_prediction_file_hashes_match_archive": true,
+  "passed": true,
+  "fitted_temperatures": 13,
+  "all_fits_converged_interior": true,
+  "all_source_calibration_nll_nonincreasing": true,
+  "changed_predictions": 0,
+  "all_calibrated_probabilities_sum_to_one": true,
+  "target_labels_used_for_fitting": false
+}

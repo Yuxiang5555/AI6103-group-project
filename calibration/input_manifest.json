@@ -1,0 +1,1458 @@
+{
+  "schema_version": 1,
+  "repository_commit": "b170b3b83df1758dcd7e752a210750f5ca1d2624",
+  "source_archive_url": "https://drive.google.com/file/d/1znKY0iB9I0rVcg2hetnm6m12dWa0z_BT/view",
+  "source_archive_size_bytes": 1187903141,
+  "archive_directory_sha256": "fbd989a1e3884a63106a11f717a9d5f99e8eec47f23614f45b1bfd017aceffc2",
+  "archive_readme_sha256": "93d3f40000177fbcac82e960ceba3d74d912410a827e58094b98a87184b45f14",
+  "code_sha256": {
+    "README.md": "93d3f40000177fbcac82e960ceba3d74d912410a827e58094b98a87184b45f14",
+    "prepare_data.py": "1b46831e5fddc580da8367d40b3cf5dfd3ce7703d482e32e30e4857d4c3864ad",
+    "train_decision.py": "1f2039d3ef0bdd075fb2b28d394827f558f9e3f449638b4be5e3ec94ed65a62c",
+    "decision_layers.py": "bac3f5e0d725ea0660219ee2f5432c9b38d2cd7754113e1ea5541bead48b3d0f",
+    "unimc_core.py": "b41fd1c09edde7067374c683016114b08041988b3936e18c2805079ff82e3db8",
+    "extract_features.py": "e0ad980f060313bd481e8bd5af6ea71a9bfba20baf30778cbb43e62ba83fbc69"
+  },
+  "members": [
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 5556197,
+      "sha256": "1499492e0c9f2b4fd0c3902f84ea7deb811471d8d5280165015de42424d0d48a",
+      "zip_crc32": "9e7edd7a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23328,
+      "sha256": "83a872384c78bd728ff4735c2318b8f14d42b98564f7dc3cee424902870958d0",
+      "zip_crc32": "9d475cfd"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61722,
+      "sha256": "7f1ad0693a938abb36c9c48aacc28fc9d8c4a8b90e2faf2fd27c76256fdc7e66",
+      "zip_crc32": "c5f08af6"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253321,
+      "sha256": "0e34a517a6a34a18d06c92b542a6863ec61df00c3859d594ddb396595830b7be",
+      "zip_crc32": "4a75a3b5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9844,
+      "sha256": "8eb6cf6cba7956a4e973ba0cc49ae2375eefc37c0e8f646f15fa6e634275366e",
+      "zip_crc32": "7344d170"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15122,
+      "sha256": "758b7b28567ac45ce073caa6067c4ed96d56d95365321d10a8dc99d6c0369374",
+      "zip_crc32": "1a6f72e6"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230216,
+      "sha256": "db757691f1ea42c49d5461ac18de8d29430ebca2409e574299aac0a61289d6b2",
+      "zip_crc32": "f8d81894"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286769,
+      "sha256": "c46c54028ab9d51419243a3b33e2eaaa33b4a21cdd09b92007b17624b0ffb59c",
+      "zip_crc32": "c6d88e95"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135616,
+      "sha256": "4c18b2c891ee5fe20bedbf586538c68221a0bfed0a7a6fc120c92865d13ccde0",
+      "zip_crc32": "05a0de51"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103762,
+      "sha256": "6265b4bac31d480cbaee16c58b02be6baa55e7b1efbb16ab2863f4122cc3a382",
+      "zip_crc32": "451220b8"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103446,
+      "sha256": "84dc022b81b30e192eb75d6e9f71fe85ad682ce599abf53e8032019f7af27fa1",
+      "zip_crc32": "786cbafc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 108003,
+      "sha256": "1a72a96352f68f236e3017b85a949addbb9a29927d4c0bf8a82c32e4640980f9",
+      "zip_crc32": "f8310c6e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248584,
+      "sha256": "cd971ffe0eb514924b4671a7c57f350c0328b3f5165f0fe194d60a636d15e784",
+      "zip_crc32": "1c827286"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280026,
+      "sha256": "cbfea6fd48642b88e97d0f60a0cd3f4f9f5046d0f56a6636b4394886589d3514",
+      "zip_crc32": "0e4bc738"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed0/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed0/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 133026,
+      "sha256": "5e27283c411e1683d8dd83a565a97ac130b0100c47939908c8c00beed8b6e4f1",
+      "zip_crc32": "3323d725"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 5556197,
+      "sha256": "c05b8b55b9d081088f9b57a2fd24477b687312fbf676c81e6ada2be61e33b46f",
+      "zip_crc32": "831fd0f7"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23305,
+      "sha256": "da7139ec6350ed315d5ae121fa4bb62c713d011ea381758d793aac69946f2544",
+      "zip_crc32": "b216f2a1"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61687,
+      "sha256": "56d4b7c8b6861f8080b33ccf13a0448a6c83f7ed2f4cea9a0eae7641e339bee3",
+      "zip_crc32": "130cff34"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253283,
+      "sha256": "1dde373503645b5760897ce516f8062485634f5592a93cc8f57e3c1dbe937f8c",
+      "zip_crc32": "b98945e2"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9861,
+      "sha256": "1c1134539e5849b18675ceb1c80dc624ee2a9618a3e8f66f7797b73e86bdddec",
+      "zip_crc32": "9cd3e3ea"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15123,
+      "sha256": "ad83bd596f237b88b148a13bb48d60177fcad4ddf6a101627ec1ef13267f36c8",
+      "zip_crc32": "bffe9ca0"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230154,
+      "sha256": "27658e7cad4cfcc858c5dc5690a0d5105e96d3f789315e29535b8d27f30571f9",
+      "zip_crc32": "1a7fb2b3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286681,
+      "sha256": "d64e1a7a701e2005299c67c0deab2c3927d8bfcbe56a4644231c535fed5b9155",
+      "zip_crc32": "e57c2df0"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2136081,
+      "sha256": "9dea89edb9e72d36f443865e72f919ece533df70554ff4d5aa14ff99ed2d4be8",
+      "zip_crc32": "2849a02e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103765,
+      "sha256": "10fc87a88e01938ebe39bfac117b7ce567f3452b4394ef7def9dbdc48e424e6b",
+      "zip_crc32": "1b1ef7d4"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103420,
+      "sha256": "5181687bb37fe77f074ed5908a601f983d4d0d624c52d8126ba6f30ea269930d",
+      "zip_crc32": "e2f16d16"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107960,
+      "sha256": "5573472e8cb951b520ec48e920d1b379aeafaab6ffc096b532a7872dd6ed215f",
+      "zip_crc32": "988283d6"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248555,
+      "sha256": "d2b174f30be7f37d40a5c622e625ccaef7ccd2524e7c6bd5497763560bd1fdd0",
+      "zip_crc32": "9a69b235"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280118,
+      "sha256": "8154c98b92bd466e64b8aa273fef85b4064e24f42d1388a688f5bccbe60ce8e4",
+      "zip_crc32": "fde018a5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed1/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed1/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132975,
+      "sha256": "2769f6e31da14c0be1c304b1f49f7fbd252b6d91667077c0b9378dc464bac571",
+      "zip_crc32": "ef7ad510"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 5556197,
+      "sha256": "0bcab0b608049ca5c25673023095414dbaea5ede43fa3f70de7df46dddc68b3b",
+      "zip_crc32": "1009e9f2"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23314,
+      "sha256": "39e42d6ca5a3a3249558cff121f27736c61df5de3505068bb5ed367cdc23e04e",
+      "zip_crc32": "f93ae824"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61681,
+      "sha256": "821afdcba561a9d14845980e40fc29ccc2eb043d78e8c28753419514f80b3078",
+      "zip_crc32": "1d89d062"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253298,
+      "sha256": "965857b66cbc1d102ad5a1f4772cfd445e98aef57778d268ba2cf6f57a7702c3",
+      "zip_crc32": "bbc7c9bb"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9856,
+      "sha256": "a83a609817ddf35abff686ecef1c1aee429432a16b3d4031d7906773d2dfc642",
+      "zip_crc32": "1dae69ff"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15112,
+      "sha256": "c92e96ed6c99c95ebdc9663243c02fc0152c707a0a98ff32ddf5bac2ef242d30",
+      "zip_crc32": "d258bd77"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230261,
+      "sha256": "c6a62c750e34168d761ae40638a34153baab3919c273be893ad146bf96bdbe45",
+      "zip_crc32": "dfb8ca72"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286696,
+      "sha256": "c54708ef20e0b748cf4f779f8d2bcce4570353fed16a66e896db43ef996867b4",
+      "zip_crc32": "893d4b72"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135644,
+      "sha256": "e57a6e9ca26ef01aa2cb52c243e4785d8d1dfa765b1a1e0b4b37d0f331184cef",
+      "zip_crc32": "a6ba7d90"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103776,
+      "sha256": "b8cb32818e047aa95f4073e4572a73f1a4a2821ff13eb2d1598d11db6185669e",
+      "zip_crc32": "430e1897"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103380,
+      "sha256": "0cda4f637187cac8c79f8d28a89f4032f6262b087c5bb6b8425c28a8c6e1c990",
+      "zip_crc32": "a74e916f"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 108002,
+      "sha256": "a91d2698c0d47fc824ee1ed09aedbb25155266b37506b20da30a9b0b84ace133",
+      "zip_crc32": "3df3d553"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248568,
+      "sha256": "56a64cfe2b4bbd353a9260ab759a1b7db3f497fb49bd8d1cf4199fd9ef52b8ac",
+      "zip_crc32": "290a9e34"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280059,
+      "sha256": "89c497b5103cd3a9298a95a52ce80415755ef69b2d0b44cb6c4c83cc93938589",
+      "zip_crc32": "8435e702"
+    },
+    {
+      "archive_member": "unimc_opt/runs/mlp/seed2/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/mlp/seed2/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 133005,
+      "sha256": "58d62aa7b194645873ff1160f7b408278bbc0c56247974eed5cb42bc42a3627f",
+      "zip_crc32": "5982b46c"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6615285,
+      "sha256": "39281f96bfa9fd5b1fc4c109734e8ce33d7d8063765e778efba620a4c423b2f7",
+      "zip_crc32": "6d7864a3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23303,
+      "sha256": "08e00682c8a7a2487a267f9016d2a57872164c9cc01de1becaa6645eff3f7646",
+      "zip_crc32": "46b970d5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61642,
+      "sha256": "8a83706ff84b0740215767cd282ff0d1a386708900f238e63b948a436462e86d",
+      "zip_crc32": "ee34e057"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253345,
+      "sha256": "f0795f6e1ded550a7ef57e7dfc9a4dec32995c564d63338ce3ae635722bfe0fa",
+      "zip_crc32": "dbd0d49b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9845,
+      "sha256": "a671b81b74c997d0e6cdad1e1000acaece18438467b6cccefe655baf448b5555",
+      "zip_crc32": "f58c06ae"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15117,
+      "sha256": "b49b49b3651ac8dd06a61a6c5b93ea6dc1232c2b7216fadff12c72a86171ae72",
+      "zip_crc32": "ead43ee6"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230302,
+      "sha256": "9a3bd9bb37ad128ce45524682cc3f40da89494e2c260f4140c9e021098efc22a",
+      "zip_crc32": "193d1c57"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286802,
+      "sha256": "3d7aa393e419e692a1c47de619dc2f018f073020e426d86c9ee3ee1143413728",
+      "zip_crc32": "d0e39200"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135596,
+      "sha256": "e12bb7920524fb0e5827e6fcfb9e9cdd8c992556a39dd7d786702c8798eaec7a",
+      "zip_crc32": "126fb8fe"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103748,
+      "sha256": "5dcb5ab0c867da09c4a7981a4ade91ff020a8db42ece7649b0d512797ca2daf7",
+      "zip_crc32": "3983d624"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103451,
+      "sha256": "b32d39b27dd9c3e9e87a710d2ea22216c5546d08cf1748d4831d8e5ecd5a004c",
+      "zip_crc32": "7bacfe9e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107943,
+      "sha256": "cca546df596dbccf1c347f6f70927099e2e7efb1627fa30be0d3a7709250df16",
+      "zip_crc32": "914df678"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248638,
+      "sha256": "4ba5b21f123ff2a7ac8776703e442b6de7646066c8fb2c8f40a46a08f3ad94b4",
+      "zip_crc32": "a234b471"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280023,
+      "sha256": "8deb12efb0f6c0a7708e8ef06255e1748d0de76ae6312cc32181bb9563809b13",
+      "zip_crc32": "95e36b08"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed0/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed0/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132982,
+      "sha256": "29fd8aa61ac1e5a07b1d3a6c58baffff846eab05de48144aea3e6f7347779f4a",
+      "zip_crc32": "d51a9f5a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6615285,
+      "sha256": "8f2f75fd432dc7c639ef76ed42b2c319556431fcf7f300d790a17fd5228d47a3",
+      "zip_crc32": "225cf446"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23294,
+      "sha256": "87bd01987282aef6417f4faf5b078c1ae214690581659c897fd88b1ee0b555a9",
+      "zip_crc32": "8b0eb253"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61716,
+      "sha256": "3a8216b0be2df48ac8b4cbca1016c6c6e83ec70f98ac7f07dba97f65eef876b6",
+      "zip_crc32": "54c1870f"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253420,
+      "sha256": "f7ebec12f51841528d7f7276f9039f659361c7883b33a1cdf37927e507a979bf",
+      "zip_crc32": "9ce7b6f3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9859,
+      "sha256": "142adb6d1f9c763c1d86cd4f792f1e2b9f336d559fd7dd59e8ed95c32303eaa9",
+      "zip_crc32": "af0bc500"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15110,
+      "sha256": "31393d0d1264a7aa4159a4e34039ff64c5e6ff0600c177d3b1427698138bf7c5",
+      "zip_crc32": "fd662775"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230257,
+      "sha256": "ded73a67a4f25f3a3eae224b0381c2b3f477bcb1d37d92c7f972541db4d3b0e5",
+      "zip_crc32": "c436993a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286748,
+      "sha256": "0a1efa8064e0d60d11ae606b9102e28b48d8e06b4f73b0127e145d23429192e9",
+      "zip_crc32": "58609686"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2136521,
+      "sha256": "867678971e81a2a3dcd752fb5530961ba1376b283dbae1d9e94baf81cc425d20",
+      "zip_crc32": "75fbde6c"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103764,
+      "sha256": "ab63c95a049814d7eeb039869b05de104f7c17d0c46a61f781dd38e824cf41cd",
+      "zip_crc32": "d07cfb04"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103436,
+      "sha256": "0dc23e4e45dc8c9835e27d4015ff55b392e2a18868a67fa395389b2d5c0253b0",
+      "zip_crc32": "10905d91"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 108063,
+      "sha256": "9bdc2c3c75c0f11055b4547451b4fff6f40f81b9376b438ce83ebadd2dc59dd0",
+      "zip_crc32": "9f99a76b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248610,
+      "sha256": "857a8c1a593ee7e1c5fa15a7748431e0c07fe19f9cd68c20559f0eba4a601067",
+      "zip_crc32": "6c8193ae"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280088,
+      "sha256": "f0478e281424ef64785fa652c4661d55627d21da1691e0ee00ddea6c5e6dfe8f",
+      "zip_crc32": "3ccdb29d"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed1/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed1/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 133018,
+      "sha256": "8d96134c52840755a75a3e957f8a4cc019a83d85e4a59e012cf518a31899f01d",
+      "zip_crc32": "ea9cf2a4"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6615285,
+      "sha256": "11c257185ecd78667c1cb9e25efc765328700de434d68baa7294c887176a277e",
+      "zip_crc32": "1048adcc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23348,
+      "sha256": "2cf4a6dfa4557e2a4797e129c0422c5fb4ffa904516c3346b5b590a5d6dfd836",
+      "zip_crc32": "75313069"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61712,
+      "sha256": "b31b0f9d6db05a325582a14922a5c7ae5655663c7abda2b50ed03df4dc8440d3",
+      "zip_crc32": "3f2c00b4"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253399,
+      "sha256": "01df155ae6e37e6ad9730d5d2fa8b7a99fd848e64910e32dfbcc0b436538cdab",
+      "zip_crc32": "94d0f0bc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9877,
+      "sha256": "7c56810d419f35a57d6cebbec0ab3786ba25b4f79f9f6fbab8ab8b8a816830a7",
+      "zip_crc32": "ebe61564"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15120,
+      "sha256": "dd8e9f6127621a9f3659d570cd5f55c30656bc852ae785d897c732194afb7922",
+      "zip_crc32": "0ec3bf8e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230287,
+      "sha256": "a28d264345b34095d69b09b52b6d16b14f50a5df515ae8980465c4b966f9bf5c",
+      "zip_crc32": "7ea01075"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286778,
+      "sha256": "b6534a2c196dc69269cafd5c8ef6ca33c476216da45ef226407ad58ad4c3cf63",
+      "zip_crc32": "9f44efd2"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2136042,
+      "sha256": "8f8c90b81735573f312c6ec3b81db1f02aba2c6b087b8eb92a7e1558cd38be5d",
+      "zip_crc32": "7bce832f"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103756,
+      "sha256": "f173d95fb9847c7edb929286a75e58e278ca3ebaee8f55899a2f53d4dbc58438",
+      "zip_crc32": "64c2246a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103483,
+      "sha256": "f26ad315df043e780a5009c4f2b30b0bc9f7d019e7b34e9a63224cec66ee5de6",
+      "zip_crc32": "cd8496fd"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 108034,
+      "sha256": "cf3b40aa31ccb0c29beadea5126144ed57d6caf2342a3b738f7810bdcf5f0a67",
+      "zip_crc32": "b3f26169"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248608,
+      "sha256": "6945a468d62eb4ac8c87efefee45a2585d8ab376ea6898de3d0ae6f9b8b7b11f",
+      "zip_crc32": "33a48cdc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280090,
+      "sha256": "f7ec49d1c9a2eecd357e15e98dc1a63ed55e2c460c721178be0bdfd4e7a00072",
+      "zip_crc32": "c8866f99"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_gate/seed2/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_gate/seed2/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 133033,
+      "sha256": "cba2f547e02e1132c2da2805fe4479b2a9a3357657041bfd3324eab010b7fd3e",
+      "zip_crc32": "1fd10587"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "7aae5ed4efe45a11e0bc91d3d00ee51133d2f8ddb8ac89544aee477d34d3edff",
+      "zip_crc32": "3bc7432f"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23294,
+      "sha256": "5ee07cca561be35a1f2d33b72d6bcb67c1151dce382cff40411b6ce28cdaec78",
+      "zip_crc32": "753c7a57"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61709,
+      "sha256": "3ea8e217238654bc9b7f470d50b9711f568b4854060dca3c4ba57a225f1697e6",
+      "zip_crc32": "d6c9576e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253370,
+      "sha256": "9b7c2906385c3cb1ba032a6fc9430cb450106a2738aff395bf27dbde2abddf7c",
+      "zip_crc32": "cf3a0b4a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9845,
+      "sha256": "bf619c6c49f2930abb7757d3d3fff7fa4ce3424f7a76476a78871149210acaa6",
+      "zip_crc32": "0ca07136"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15119,
+      "sha256": "c98c9a0958bff90ae7cd7323fc2016d58254e2eba035bec7172c9ad7d12a2d15",
+      "zip_crc32": "feb9432c"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230273,
+      "sha256": "aba2a42b0d823c0a7414b9e4339a1455048fc3cffb195cc62a837a72e0c59f87",
+      "zip_crc32": "f0fe53f8"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286800,
+      "sha256": "150f4e7553f600ead50066ee0da97b42f9487f8a1d62ee9c11846ff1d0c5bb2a",
+      "zip_crc32": "37b2aaa5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2136018,
+      "sha256": "2318e5381cffed33230431cfbc2640fd1bca05672d0a28edd4b11c562c08e5b1",
+      "zip_crc32": "bc83b6b7"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103749,
+      "sha256": "a001056d5b4004edacc9df1ceb54d75d6f796c960b6bb68eaec1645f3c0145c9",
+      "zip_crc32": "47a042e8"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103478,
+      "sha256": "0ee6263ef26f1ceaf53889566007087eebb771bd67295a1723f8909e4d8f4e7c",
+      "zip_crc32": "d3d99758"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107996,
+      "sha256": "432a9a81d6924652cc0c13633499658d70c3b7167a05ba55b51aece6c235cc27",
+      "zip_crc32": "7a916b40"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248617,
+      "sha256": "c4820dcfa226ca12729e67c9e2f2d34ee920ed3d0e7fc4e5c42ea53982fe2adf",
+      "zip_crc32": "b4e455ff"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280055,
+      "sha256": "71e549427c7966dfb61041d3500eb7c519ed2af516a2a1148ccc53926c2a106b",
+      "zip_crc32": "3b3ed4cb"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed0/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed0/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132984,
+      "sha256": "d7f24624252c58b3f5c9641498d9c5d8d9cc92bb33c4bcefcb5cf8d0948d299a",
+      "zip_crc32": "d6e17796"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "ec81115c2f26d9906d51528c2ceb1e3589804d32e2fb1846993da00a6af71159",
+      "zip_crc32": "bcabfa97"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23270,
+      "sha256": "f47205336db0384a2b4ac2ce225698cfd0ca9655d606beb57260837741551b05",
+      "zip_crc32": "c64f7905"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61702,
+      "sha256": "3ea2227b503449fa37c2cd26f80628c23a8ac70bdaea8af41ef21d06d2ae870b",
+      "zip_crc32": "5f6b7904"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253308,
+      "sha256": "16c6c10707bdfb743cc70303d368f915d9fc7acc4b7f5eed0cf25e17047a3e22",
+      "zip_crc32": "1ce49a25"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9856,
+      "sha256": "9f6c6af512fe6b8ebca3ecf0a66af5c73da9abd57790e9a98d29d63e038bb2ed",
+      "zip_crc32": "6c4aebde"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15110,
+      "sha256": "d00df41741c197c5198a5f6fdb74b59fe1132d7e075b6a4b7fdfd40207c6c04a",
+      "zip_crc32": "d3c7822b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230318,
+      "sha256": "184e49977805abd3e2cdcba87a3cd14f97012dca863af620f88732774728a6d7",
+      "zip_crc32": "a2465381"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286651,
+      "sha256": "4495a0666a90d4ed41c5b3c3724a1541bae964c1cdc8509a80b7cb2c3160b7ad",
+      "zip_crc32": "e28558b0"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135889,
+      "sha256": "2cc18b1e40e79fb144442ebd2cb0701fcd3ac74d25106064035a45f38e81306f",
+      "zip_crc32": "f47280c3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103683,
+      "sha256": "7f9eff04c8331ecf40cb5d881ce9e5b52fb36c8ae7cc19cc325eacb8e7ff9c76",
+      "zip_crc32": "45c7ba83"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103392,
+      "sha256": "d864b1185713c93cc1b306cacf206ab180e7e5744d092b554a5d882c3788ffd7",
+      "zip_crc32": "f9d44cd6"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107969,
+      "sha256": "74942678ba699de058dd0541c98fa2de474deb5386b5ef97544de61faaabf0b4",
+      "zip_crc32": "4414b7df"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248526,
+      "sha256": "a17e92bfdce5d8a0ae0df75f9af9c5640d3eaef6a9a410ed66716bdfd453ddf1",
+      "zip_crc32": "c7f8a2e1"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280101,
+      "sha256": "d52af334d3f917bc6a68de86e23aedb264d6b884b52103e4bbe54002c926bd8d",
+      "zip_crc32": "c6533a18"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed1/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed1/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132973,
+      "sha256": "f804e0a390bc8fc62e2a8d0a285350bac54174fcf121d94b85f7f6cf924a8246",
+      "zip_crc32": "b5af8f23"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "137d7ef529fccb2b245d83720914f1270658fa7e97b8431a0fea59137d1dd396",
+      "zip_crc32": "09734c73"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23322,
+      "sha256": "7ce350807113c49f79e0c6396e79eeb57ab0ff342ca4b2d7fffaf89e0b75c014",
+      "zip_crc32": "d15337bc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61688,
+      "sha256": "533272f3b00547fab67543d1c4c7dde66591d112b991653e570be7169d87b687",
+      "zip_crc32": "4b9f3ed8"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253371,
+      "sha256": "4b52c741ec775de63eef87aec26841d0d61ab72240ff40e1625cb80803278c80",
+      "zip_crc32": "075e425e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9847,
+      "sha256": "4cd207501f50e76e8fd38db513a00cdb2e98083a166631f572e05403916e643b",
+      "zip_crc32": "1d0b25ff"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15105,
+      "sha256": "4ebefdcaaae3a1f89c65e3eff6649a1d74430aad33353e5ed2433ac53bed2538",
+      "zip_crc32": "afb303f3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230225,
+      "sha256": "1e2fc8bb541dfb46327e4eb8775a437a1d6d6edade9689703e09e9184a0acd63",
+      "zip_crc32": "1b054d3d"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286635,
+      "sha256": "a702dfbdff86c283d157f775e937a9677eaac7cbbdfbafbf7f656a853e6f8dbc",
+      "zip_crc32": "9e800e59"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135984,
+      "sha256": "54295ceb326e573321f33722299db48768f8767dba526601d73dcc0e644d2326",
+      "zip_crc32": "eeb5028d"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103760,
+      "sha256": "9c7cc4a9605e6e42dbf69cee3ffad5ba20b9f70be46d720aa0fff3ef2eadccff",
+      "zip_crc32": "132b23c5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103394,
+      "sha256": "d66b82c5db7edcfcc1d05b5eb02288207206f66c48ab3636ccdc4bcca8872aa7",
+      "zip_crc32": "f73ed300"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 108034,
+      "sha256": "4393b811c0d307eee1b59173c08cd92f390d580047b8403906255e8411faca35",
+      "zip_crc32": "0f596846"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248587,
+      "sha256": "16563bf67910334b8c0f8b11a45304bc11e3ad2f5880debb644db29e5cc95ff8",
+      "zip_crc32": "5a53f5e7"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280038,
+      "sha256": "4af85266cf5725beb4add35641eee3a1289dfa24d0d48e9a3d45c0a40c23f79f",
+      "zip_crc32": "bb65b647"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_int/seed2/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_int/seed2/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132977,
+      "sha256": "658077087f2ada70b1d9a19884d0463fe123ca344110ce516d1b96ab5cb32add",
+      "zip_crc32": "04c04b43"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "9eaf6018cd9bc5909e70cb7fcd0f32b04c4a96dea48a596b7a41a4f74fc5d9fd",
+      "zip_crc32": "5b00ad11"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23330,
+      "sha256": "e85f83d48beb6e2251e33896afcb25515eb99a44757ac98ef743d0ccf5c8c31c",
+      "zip_crc32": "3f89fbe5"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61683,
+      "sha256": "0bb63d0d3b9f0a58f8f6030fdba241b31c06a1e49104101ceae33a1c3e1b6f48",
+      "zip_crc32": "73383b06"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253289,
+      "sha256": "e0a9abc8f3fbfcb58677ca72caa6567ec74095a1a67b573ed071fb83a5f894ed",
+      "zip_crc32": "b4a8edca"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9847,
+      "sha256": "09ef569196323587cefe2de4c83ae72f4bdaa287aff0d08ccbca0b63f8514598",
+      "zip_crc32": "aac862bb"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15126,
+      "sha256": "c3a6873b5cceabd009098a58df10d48c81f251b4f45fe7c2da78b561466af7a7",
+      "zip_crc32": "160ade19"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230266,
+      "sha256": "b3320078c5b36e389e009d2b56dc8075b170924aa2e8db2d7caf149b950b39a7",
+      "zip_crc32": "08ccc5c2"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286699,
+      "sha256": "dc50261d7bd0fb7de1dac50fc7705e794faa659c5bec203231fdf5f8ec944672",
+      "zip_crc32": "f7e5b0dc"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135301,
+      "sha256": "afcfce1dc2e69c2cabdcfd725b062d3fde03e591ecd0cfeb8c4f1c4ecf113742",
+      "zip_crc32": "88e2cd3d"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103723,
+      "sha256": "43c7a9b65eec59d2601ff686cffc3499f819193e079f30bb746ce97861166d75",
+      "zip_crc32": "104a52dd"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103422,
+      "sha256": "3a492f6c44a68e9642c4b6f040b343a09ad128e8d099e0c55e5fdc0fb55b0178",
+      "zip_crc32": "0b8af247"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107916,
+      "sha256": "9c2587b7c80c26de3611138f816c71622baeea6a33ffffeff1d765acec852cb0",
+      "zip_crc32": "ef99c95b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248575,
+      "sha256": "840d48553cb85954a0248f7f178204f34e7f6ad27d70e2e9e82918da771eeeb5",
+      "zip_crc32": "6e0e8c80"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280008,
+      "sha256": "e7c3630177769acb32b18b2363837c1114e75332c0f58ed6b6ffc50c0aaf6733",
+      "zip_crc32": "b7816e35"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed0/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed0/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132941,
+      "sha256": "44515bd8e6e47be544958b57d081330a268d515a4649b59a8f14b0ba3e001ccc",
+      "zip_crc32": "0c70e115"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "53158bc6697ccd9f4c847b1cea66322b9d2d8a08b7351daebacf12d3f7efd020",
+      "zip_crc32": "88da88f1"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23320,
+      "sha256": "54ed9318873cc696f37b981da27d393a28758261f8bf992779f1bef045ad6103",
+      "zip_crc32": "410113ad"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61692,
+      "sha256": "3b956ac9926fe499bc1f3b7f1096d40e1e175ce69348b0742f6a04d6efc3cfa2",
+      "zip_crc32": "fdf87523"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253304,
+      "sha256": "4d8bb5172eb3d0392282722a735807c626022de516041c38d153688d320d71e2",
+      "zip_crc32": "5bab8990"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9853,
+      "sha256": "de8f18d9f6af2604fcbccc4171f1879d1338012de9c26a6356b93b0f2e769844",
+      "zip_crc32": "34e57622"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15117,
+      "sha256": "6882c43b8d41d4d1faf302f1ab71d2a404a2878d5f934d5a33485f12b576a082",
+      "zip_crc32": "704345f9"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230273,
+      "sha256": "25e743995a03867b47148a45258d3330562a6bd428bb047dc6d1ebd62452cccd",
+      "zip_crc32": "bb0b18b4"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286768,
+      "sha256": "cfed55b2073fda022f4358b56497e92d2b6da0591643446b03f506ea35417164",
+      "zip_crc32": "c988ed43"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135642,
+      "sha256": "d939337ea5691fa787fb9779af71bec7e948c56d3bdf5179c473232c05f72e5a",
+      "zip_crc32": "19422da9"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103763,
+      "sha256": "a8adbf4805b365e287d9769b2203ee37dbd470493ec7761e59878a3a0a8830d3",
+      "zip_crc32": "a33aaae2"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103409,
+      "sha256": "d1c23614501bfefcdab076763bab22acc7f017734333f1f2ccfe344317ec7996",
+      "zip_crc32": "5264be68"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107986,
+      "sha256": "1c2671732949244fa058c2a9c7e2f69e5a984d23b3f070c41da2d146dad76711",
+      "zip_crc32": "7a216ca4"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248609,
+      "sha256": "f7b5d74b8f852bf74c467952eb4c8927c44c98f3c30a3b0a5883a2d3501664fa",
+      "zip_crc32": "02fdb113"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280078,
+      "sha256": "d0b53460439838a215d2b078bfbb4590bedff02b22084b3589b9fd3a9d45e960",
+      "zip_crc32": "7fbc1056"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed1/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed1/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 132980,
+      "sha256": "2cc1bf774f956a329976e3dce77549b932f110daa183e2b30dce2e9d14c9a6c7",
+      "zip_crc32": "61e9acea"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/best.pt",
+      "local_path": null,
+      "purpose": "checkpoint_identity",
+      "file_size": 6612609,
+      "sha256": "a3d9ca4b15118e7b61a28ebc9277ab73decaad89a90a7e292514382ab9ad9139",
+      "zip_crc32": "c9303a27"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/arc_c_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/arc_c_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 23308,
+      "sha256": "916d71a0474da160bfcd18c9eb5506e15a02020f9b96ca73c55818d03b1310d8",
+      "zip_crc32": "bce1d13e"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/arc_c_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/arc_c_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 61724,
+      "sha256": "0309bf6bbb95173ada183acf92c166084a1a86b7309a6939371a505009fb7add",
+      "zip_crc32": "8829dc9b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/arc_c_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/arc_c_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 253425,
+      "sha256": "e5d00c1118b362303810264f764458b66983a98e63f4e6b851311a680850bc36",
+      "zip_crc32": "f6093a2b"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/cb_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/cb_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 9857,
+      "sha256": "553c3142efc32210bba412b6a0af4b54a4e01ada1a2b530409c51a8aa7f5abed",
+      "zip_crc32": "3743ea05"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/copa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/copa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 15109,
+      "sha256": "e2b92bc15a50cf14f524b5404c5ca43f0afe001dd3988f95bf474b84070dc6f8",
+      "zip_crc32": "437f6a75"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/csqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/csqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 230279,
+      "sha256": "03ab2fb7230adfa7fd39537cc681fe8daf763ccb065ffdbed4b2b60988172325",
+      "zip_crc32": "b720248f"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/csqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/csqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 286779,
+      "sha256": "2ac0dfcd1ce737ea067043c4d741283d837e37423a2989084fe36e5829572d48",
+      "zip_crc32": "4151bf34"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/hellaswag_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/hellaswag_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 2135923,
+      "sha256": "1167d17ffe093b5444c5130fea7267e9962656549fd61665c1365c88befbf92a",
+      "zip_crc32": "43980113"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/obqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/obqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 103758,
+      "sha256": "e2ff9911d284e6da7b16702e5f4bc96353f061c3d06b4fc15d03f356426ee617",
+      "zip_crc32": "7b7ff4a1"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/obqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/obqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 103483,
+      "sha256": "c2b9607d86c2e7d98caf65df7260eb8a9962889a93a23b4c1f523625a18d40d8",
+      "zip_crc32": "20c1c66a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/obqa_test_official.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/obqa_test_official.jsonl",
+      "purpose": "prediction",
+      "file_size": 107978,
+      "sha256": "eb63c3dd61fc311751a6d805d255002da63b804a0f577c28cf20a88d479cda79",
+      "zip_crc32": "2c68d2e3"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/piqa_calib.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/piqa_calib.jsonl",
+      "purpose": "prediction",
+      "file_size": 248615,
+      "sha256": "2caa2911e288b216fa61222edc6e3d98a0caa8858d4b1aa8606e415217e99ed7",
+      "zip_crc32": "47f9ad6a"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/piqa_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/piqa_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 280035,
+      "sha256": "fa7746d9d0d61b2406202b55804654560bf645befa95481293398c733517c915",
+      "zip_crc32": "db627503"
+    },
+    {
+      "archive_member": "unimc_opt/runs/tf_noint/seed2/preds/sst2_test.jsonl",
+      "local_path": "unimc_decision_layers/runs/tf_noint/seed2/preds/sst2_test.jsonl",
+      "purpose": "prediction",
+      "file_size": 133002,
+      "sha256": "ac4e2963bf0a95fdd6efb1f84b9190da8a9bbdb6c9a8b405411b46d459a0e860",
+      "zip_crc32": "58449bd9"
+    }
+  ]
+}

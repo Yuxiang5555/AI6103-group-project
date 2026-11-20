@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "repository_commit": "b170b3b83df1758dcd7e752a210750f5ca1d2624",
+  "input_manifest_sha256": "230396e3f3a517e5be2689759f236c6ffa06b18209885b481d66565614586054",
+  "protocol": {
+    "ece_bins": 15,
+    "ece_bin_intervals": "right-closed, zero included in first bin",
+    "brier": "sum over valid classes, example mean, range [0,2]",
+    "fit_objective": "pooled source-calibration example-mean natural-log NLL",
+    "source_datasets": [
+      "arc_c",
+      "csqa",
+      "obqa",
+      "piqa"
+    ],
+    "target_datasets": [
+      "sst2",
+      "cb",
+      "copa",
+      "hellaswag"
+    ],
+    "target_aggregation": "equal task weights, then training-seed mean and sample SD",
+    "seed_sd_ddof": 1,
+    "baseline_repetitions": 1
+  },
+  "fits": {
+    "unimc": {
+      "temperature": 0.9171801940121688,
+      "inverse_temperature": 1.090298293103713,
+      "nll_before": 0.5904123508092634,
+      "nll_after": 0.5891256365275201,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "unimc",
+      "seed": null,
+      "calibration_inputs_sha256": {
+        "arc_c": "83a872384c78bd728ff4735c2318b8f14d42b98564f7dc3cee424902870958d0",
+        "csqa": "db757691f1ea42c49d5461ac18de8d29430ebca2409e574299aac0a61289d6b2",
+        "obqa": "6265b4bac31d480cbaee16c58b02be6baa55e7b1efbb16ab2863f4122cc3a382",
+        "piqa": "cd971ffe0eb514924b4671a7c57f350c0328b3f5165f0fe194d60a636d15e784"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "raw",
+      "base_model": "IDEA-CCNL/Erlangshen-UniMC-Albert-235M-English",
+      "base_implementation_sha256": "b41fd1c09edde7067374c683016114b08041988b3936e18c2805079ff82e3db8",
+      "base_prediction_identity": {
+        "arc_c": "83a872384c78bd728ff4735c2318b8f14d42b98564f7dc3cee424902870958d0",
+        "csqa": "db757691f1ea42c49d5461ac18de8d29430ebca2409e574299aac0a61289d6b2",
+        "obqa": "6265b4bac31d480cbaee16c58b02be6baa55e7b1efbb16ab2863f4122cc3a382",
+        "piqa": "cd971ffe0eb514924b4671a7c57f350c0328b3f5165f0fe194d60a636d15e784"
+      }
+    },
+    "mlp/seed0": {
+      "temperature": 1.144004035623306,
+      "inverse_temperature": 0.8741227905329494,
+      "nll_before": 0.5845865159427031,
+      "nll_after": 0.5808699179375458,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "mlp",
+      "seed": 0,
+      "calibration_inputs_sha256": {
+        "arc_c": "83a872384c78bd728ff4735c2318b8f14d42b98564f7dc3cee424902870958d0",
+        "csqa": "db757691f1ea42c49d5461ac18de8d29430ebca2409e574299aac0a61289d6b2",
+        "obqa": "6265b4bac31d480cbaee16c58b02be6baa55e7b1efbb16ab2863f4122cc3a382",
+        "piqa": "cd971ffe0eb514924b4671a7c57f350c0328b3f5165f0fe194d60a636d15e784"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "1499492e0c9f2b4fd0c3902f84ea7deb811471d8d5280165015de42424d0d48a"
+    },
+    "mlp/seed1": {
+      "temperature": 1.0685558508907487,
+      "inverse_temperature": 0.9358425197582321,
+      "nll_before": 0.5735863986597078,
+      "nll_after": 0.5727185833899422,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "mlp",
+      "seed": 1,
+      "calibration_inputs_sha256": {
+        "arc_c": "da7139ec6350ed315d5ae121fa4bb62c713d011ea381758d793aac69946f2544",
+        "csqa": "27658e7cad4cfcc858c5dc5690a0d5105e96d3f789315e29535b8d27f30571f9",
+        "obqa": "10fc87a88e01938ebe39bfac117b7ce567f3452b4394ef7def9dbdc48e424e6b",
+        "piqa": "d2b174f30be7f37d40a5c622e625ccaef7ccd2524e7c6bd5497763560bd1fdd0"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "c05b8b55b9d081088f9b57a2fd24477b687312fbf676c81e6ada2be61e33b46f"
+    },
+    "mlp/seed2": {
+      "temperature": 1.017503158005827,
+      "inverse_temperature": 0.9827979324996585,
+      "nll_before": 0.5764811822336451,
+      "nll_after": 0.5764227039093844,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "mlp",
+      "seed": 2,
+      "calibration_inputs_sha256": {
+        "arc_c": "39e42d6ca5a3a3249558cff121f27736c61df5de3505068bb5ed367cdc23e04e",
+        "csqa": "c6a62c750e34168d761ae40638a34153baab3919c273be893ad146bf96bdbe45",
+        "obqa": "b8cb32818e047aa95f4073e4572a73f1a4a2821ff13eb2d1598d11db6185669e",
+        "piqa": "56a64cfe2b4bbd353a9260ab759a1b7db3f497fb49bd8d1cf4199fd9ef52b8ac"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "0bcab0b608049ca5c25673023095414dbaea5ede43fa3f70de7df46dddc68b3b"
+    },
+    "tf_noint/seed0": {
+      "temperature": 1.131084332595487,
+      "inverse_temperature": 0.8841073748279324,
+      "nll_before": 0.5791652622152371,
+      "nll_after": 0.575903232589772,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_noint",
+      "seed": 0,
+      "calibration_inputs_sha256": {
+        "arc_c": "e85f83d48beb6e2251e33896afcb25515eb99a44757ac98ef743d0ccf5c8c31c",
+        "csqa": "b3320078c5b36e389e009d2b56dc8075b170924aa2e8db2d7caf149b950b39a7",
+        "obqa": "43c7a9b65eec59d2601ff686cffc3499f819193e079f30bb746ce97861166d75",
+        "piqa": "840d48553cb85954a0248f7f178204f34e7f6ad27d70e2e9e82918da771eeeb5"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "9eaf6018cd9bc5909e70cb7fcd0f32b04c4a96dea48a596b7a41a4f74fc5d9fd"
+    },
+    "tf_noint/seed1": {
+      "temperature": 1.101591077531045,
+      "inverse_temperature": 0.9077778682097379,
+      "nll_before": 0.5753563034961517,
+      "nll_after": 0.5734302155800087,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_noint",
+      "seed": 1,
+      "calibration_inputs_sha256": {
+        "arc_c": "54ed9318873cc696f37b981da27d393a28758261f8bf992779f1bef045ad6103",
+        "csqa": "25e743995a03867b47148a45258d3330562a6bd428bb047dc6d1ebd62452cccd",
+        "obqa": "a8adbf4805b365e287d9769b2203ee37dbd470493ec7761e59878a3a0a8830d3",
+        "piqa": "f7b5d74b8f852bf74c467952eb4c8927c44c98f3c30a3b0a5883a2d3501664fa"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "53158bc6697ccd9f4c847b1cea66322b9d2d8a08b7351daebacf12d3f7efd020"
+    },
+    "tf_noint/seed2": {
+      "temperature": 1.121948837370062,
+      "inverse_temperature": 0.8913062402596541,
+      "nll_before": 0.5819364946089376,
+      "nll_after": 0.5792397548915625,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_noint",
+      "seed": 2,
+      "calibration_inputs_sha256": {
+        "arc_c": "916d71a0474da160bfcd18c9eb5506e15a02020f9b96ca73c55818d03b1310d8",
+        "csqa": "03ab2fb7230adfa7fd39537cc681fe8daf763ccb065ffdbed4b2b60988172325",
+        "obqa": "e2ff9911d284e6da7b16702e5f4bc96353f061c3d06b4fc15d03f356426ee617",
+        "piqa": "2caa2911e288b216fa61222edc6e3d98a0caa8858d4b1aa8606e415217e99ed7"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "a3d9ca4b15118e7b61a28ebc9277ab73decaad89a90a7e292514382ab9ad9139"
+    },
+    "tf_int/seed0": {
+      "temperature": 1.131948364618206,
+      "inverse_temperature": 0.8834325233000264,
+      "nll_before": 0.5799136810496789,
+      "nll_after": 0.5768115967741304,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_int",
+      "seed": 0,
+      "calibration_inputs_sha256": {
+        "arc_c": "5ee07cca561be35a1f2d33b72d6bcb67c1151dce382cff40411b6ce28cdaec78",
+        "csqa": "aba2a42b0d823c0a7414b9e4339a1455048fc3cffb195cc62a837a72e0c59f87",
+        "obqa": "a001056d5b4004edacc9df1ceb54d75d6f796c960b6bb68eaec1645f3c0145c9",
+        "piqa": "c4820dcfa226ca12729e67c9e2f2d34ee920ed3d0e7fc4e5c42ea53982fe2adf"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "7aae5ed4efe45a11e0bc91d3d00ee51133d2f8ddb8ac89544aee477d34d3edff"
+    },
+    "tf_int/seed1": {
+      "temperature": 1.123696678257785,
+      "inverse_temperature": 0.889919868367353,
+      "nll_before": 0.5788650256338029,
+      "nll_after": 0.5760876351385033,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_int",
+      "seed": 1,
+      "calibration_inputs_sha256": {
+        "arc_c": "f47205336db0384a2b4ac2ce225698cfd0ca9655d606beb57260837741551b05",
+        "csqa": "184e49977805abd3e2cdcba87a3cd14f97012dca863af620f88732774728a6d7",
+        "obqa": "7f9eff04c8331ecf40cb5d881ce9e5b52fb36c8ae7cc19cc325eacb8e7ff9c76",
+        "piqa": "a17e92bfdce5d8a0ae0df75f9af9c5640d3eaef6a9a410ed66716bdfd453ddf1"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "ec81115c2f26d9906d51528c2ceb1e3589804d32e2fb1846993da00a6af71159"
+    },
+    "tf_int/seed2": {
+      "temperature": 1.1873122470008934,
+      "inverse_temperature": 0.8422384276132608,
+      "nll_before": 0.5804187250876774,
+      "nll_after": 0.5739345274606479,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_int",
+      "seed": 2,
+      "calibration_inputs_sha256": {
+        "arc_c": "7ce350807113c49f79e0c6396e79eeb57ab0ff342ca4b2d7fffaf89e0b75c014",
+        "csqa": "1e2fc8bb541dfb46327e4eb8775a437a1d6d6edade9689703e09e9184a0acd63",
+        "obqa": "9c7cc4a9605e6e42dbf69cee3ffad5ba20b9f70be46d720aa0fff3ef2eadccff",
+        "piqa": "16563bf67910334b8c0f8b11a45304bc11e3ad2f5880debb644db29e5cc95ff8"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "137d7ef529fccb2b245d83720914f1270658fa7e97b8431a0fea59137d1dd396"
+    },
+    "tf_gate/seed0": {
+      "temperature": 1.0900686379573048,
+      "inverse_temperature": 0.9173734251027663,
+      "nll_before": 0.5783304161363757,
+      "nll_after": 0.5768557436115347,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_gate",
+      "seed": 0,
+      "calibration_inputs_sha256": {
+        "arc_c": "08e00682c8a7a2487a267f9016d2a57872164c9cc01de1becaa6645eff3f7646",
+        "csqa": "9a3bd9bb37ad128ce45524682cc3f40da89494e2c260f4140c9e021098efc22a",
+        "obqa": "5dcb5ab0c867da09c4a7981a4ade91ff020a8db42ece7649b0d512797ca2daf7",
+        "piqa": "4ba5b21f123ff2a7ac8776703e442b6de7646066c8fb2c8f40a46a08f3ad94b4"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "39281f96bfa9fd5b1fc4c109734e8ce33d7d8063765e778efba620a4c423b2f7"
+    },
+    "tf_gate/seed1": {
+      "temperature": 1.1236071297618428,
+      "inverse_temperature": 0.8899907926108992,
+      "nll_before": 0.5775801870250283,
+      "nll_after": 0.5748240111687125,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_gate",
+      "seed": 1,
+      "calibration_inputs_sha256": {
+        "arc_c": "87bd01987282aef6417f4faf5b078c1ae214690581659c897fd88b1ee0b555a9",
+        "csqa": "ded73a67a4f25f3a3eae224b0381c2b3f477bcb1d37d92c7f972541db4d3b0e5",
+        "obqa": "ab63c95a049814d7eeb039869b05de104f7c17d0c46a61f781dd38e824cf41cd",
+        "piqa": "857a8c1a593ee7e1c5fa15a7748431e0c07fe19f9cd68c20559f0eba4a601067"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "8f2f75fd432dc7c639ef76ed42b2c319556431fcf7f300d790a17fd5228d47a3"
+    },
+    "tf_gate/seed2": {
+      "temperature": 1.1581746453609225,
+      "inverse_temperature": 0.8634276393508593,
+      "nll_before": 0.5855929123097469,
+      "nll_after": 0.5810763885911692,
+      "converged": true,
+      "boundary": null,
+      "iterations": 47,
+      "n": 3193,
+      "model": "tf_gate",
+      "seed": 2,
+      "calibration_inputs_sha256": {
+        "arc_c": "2cf4a6dfa4557e2a4797e129c0422c5fb4ffa904516c3346b5b590a5d6dfd836",
+        "csqa": "a28d264345b34095d69b09b52b6d16b14f50a5df515ae8980465c4b966f9bf5c",
+        "obqa": "f173d95fb9847c7edb929286a75e58e278ca3ebaee8f55899a2f53d4dbc58438",
+        "piqa": "6945a468d62eb4ac8c87efefee45a2585d8ab376ea6898de3d0ae6f9b8b7b11f"
+      },
+      "source_counts": {
+        "arc_c": 112,
+        "csqa": 974,
+        "obqa": 496,
+        "piqa": 1611
+      },
+      "logits_field": "new",
+      "checkpoint_sha256": "11c257185ecd78667c1cb9e25efc765328700de434d68baa7294c887176a277e"
+    }
+  }
+}

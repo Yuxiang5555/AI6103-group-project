@@ -2,11 +2,16 @@
 
 The model-optimization component of [AI6103-group-project](https://github.com/Yuxiang5555/AI6103-group-project): an experimental study of residual option scoring, option centering, interaction gating, and LoRA adaptation for the English UniMC ALBERT model.
 
-This repository contains the model-optimization part of the project: implementation, CPU contract tests, Slurm recipes, source-development results, and diagnostic reports. Calibration/rejection fitting and final independent-target evaluation are separate downstream tasks.
+The final v0.3 decision-layer confidence-calibration deliverable is available in
+[calibration/README.md](calibration/README.md). It includes source-only global
+temperature fitting, ECE/NLL/Brier tables, reliability diagrams, and an
+[English methods and results report](calibration/results/report.md).
+
+This repository contains model implementations, CPU contract tests, Slurm recipes, experimental results, and diagnostic reports. The final v0.3 decision-layer evaluation is in `unimc_decision_layers/`, and its confidence calibration is in `calibration/`.
 
 ## Current evidence
 
-All reported accuracy results use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
+The `unimc_model_optimization/` accuracy results in this section use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
 
 | Method | Seeds | Source macro accuracy | Seed SD (percentage points) | Difference from baseline (pp) |
 |---|---|---:|---:|---:|
@@ -35,6 +40,8 @@ Centering itself uses all candidates in a question. Accordingly, the centered se
 AI6103-group-project/
 ├── README.md                    One project overview and entry point
 ├── .github/                     CPU test workflow
+├── calibration/                 Final decision-layer temperature calibration and results
+├── unimc_decision_layers/        Final v0.3 decision-layer experiments and target evaluation
 └── unimc_model_optimization/
     ├── *.py                     Byte-preserved model and experiment implementations
     ├── docs/
@@ -100,7 +107,7 @@ For Slurm, submit from `unimc_model_optimization/` after `mkdir -p logs`. Templa
 - [Results, negative findings, and planned work](unimc_model_optimization/docs/TECHNICAL_REPORT.md#source-development-results)
 - [GitHub upload instructions in Chinese](unimc_model_optimization/docs/OPERATIONS.md#github-publication-instructions)
 
-The proposed learning-rate comparison (`1e-4` versus `1e-5`, otherwise fixed settings) has **not** been run in the evidence included here. Independent-target, calibration, and no-answer rejection results are also not included.
+The proposed learning-rate comparison (`1e-4` versus `1e-5`, otherwise fixed settings) has **not** been run in the evidence included here. The `unimc_model_optimization/` reports cover source-development experiments. The final v0.3 decision-layer target evaluation and confidence-calibration results are provided in `unimc_decision_layers/` and `calibration/`.
 
 ## Upstream resources and licensing status
 
