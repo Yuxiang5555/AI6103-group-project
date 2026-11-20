@@ -9,6 +9,8 @@ temperature fitting, ECE/NLL/Brier tables, reliability diagrams, and an
 
 This repository contains model implementations, CPU contract tests, Slurm recipes, experimental results, and diagnostic reports. The final v0.3 decision-layer evaluation is in `unimc_decision_layers/`, and its confidence calibration is in `calibration/`.
 
+Across four held-out target tasks, centered full averaged 77.81% accuracy versus 78.67% for the frozen UniMC baseline. The paired 95% interval for the difference was [−2.22, +0.05] percentage points. See the [verified results and perturbation analysis](aggregate_eval/results/README.md) and [evaluation protocol](aggregate_eval/README.md).
+
 ## Current evidence
 
 The `unimc_model_optimization/` accuracy results in this section use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
@@ -22,7 +24,7 @@ The `unimc_model_optimization/` accuracy results in this section use the same PI
 | Centered features + interaction Gate | 42, 43, 44 | 76.4332% | 0.0674 | +0.0168 |
 | Native-objective LoRA, best trained checkpoint | 42 only | 76.1112% | — | −0.3052 |
 
-The centered full head is a candidate for independent evaluation. Its exploratory paired-question interval for improvement over baseline includes zero. Gate did not improve mean accuracy over full attention. The tested LoRA configuration did not improve accuracy. No stable target-task gain is claimed. See [complete results and interpretation](unimc_model_optimization/docs/TECHNICAL_REPORT.md#source-development-results).
+The centered full head was selected for independent evaluation after its small mean gain on source validation. Its exploratory source-validation interval for improvement over baseline includes zero. Gate did not improve mean accuracy over full attention. The tested LoRA configuration did not improve accuracy. No stable target-task gain is claimed. See [complete results and interpretation](unimc_model_optimization/docs/TECHNICAL_REPORT.md#source-development-results).
 
 ## What is implemented
 
