@@ -4,6 +4,8 @@ The model-optimization component of [AI6103-group-project](https://github.com/Yu
 
 This repository contains the model-optimization part of the project: implementation, CPU contract tests, Slurm recipes, source-development results, and diagnostic reports. Calibration/rejection fitting and final independent-target evaluation are separate downstream tasks.
 
+The [aggregate evaluation protocol and runner](aggregate_eval/README.md) prepare four held-out target tasks and paired option perturbations for the fixed model comparison.
+
 ## Current evidence
 
 All reported accuracy results use the same PIQA/CommonsenseQA **source validation** split. They are not independent target-task results. Macro accuracy is the equal-weight average of the two task accuracies.
