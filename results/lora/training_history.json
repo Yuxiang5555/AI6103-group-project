@@ -1,0 +1,58 @@
+[
+  {
+    "epoch": 1,
+    "train_native_loss": 1.5079708936784881,
+    "seconds": 452.00623763888143,
+    "optimizer_updates_total": 250,
+    "max_preclip_gradient_norm": 310.5401916503906,
+    "source_validation": {
+      "n": 1517,
+      "accuracy": 0.7593935398813447,
+      "macro_accuracy": 0.7611115761278983,
+      "macro_nll": 0.5798074840070415,
+      "per_dataset": {
+        "commonsenseqa": {
+          "n": 598,
+          "correct": 460,
+          "accuracy": 0.7692307692307693,
+          "nll": 0.6112989975256804
+        },
+        "piqa": {
+          "n": 919,
+          "correct": 692,
+          "accuracy": 0.7529923830250272,
+          "nll": 0.5483159704884025
+        }
+      }
+    },
+    "peak_gpu_allocated_gib": 1.4641728401184082
+  },
+  {
+    "epoch": 2,
+    "train_native_loss": 1.4190931286835111,
+    "seconds": 459.26314809103496,
+    "optimizer_updates_total": 500,
+    "max_preclip_gradient_norm": 41.4716796875,
+    "source_validation": {
+      "n": 1517,
+      "accuracy": 0.7481872116018458,
+      "macro_accuracy": 0.7518623922323596,
+      "macro_nll": 0.5758787419326057,
+      "per_dataset": {
+        "commonsenseqa": {
+          "n": 598,
+          "correct": 460,
+          "accuracy": 0.7692307692307693,
+          "nll": 0.6056666125091091
+        },
+        "piqa": {
+          "n": 919,
+          "correct": 675,
+          "accuracy": 0.73449401523395,
+          "nll": 0.5460908713561023
+        }
+      }
+    },
+    "peak_gpu_allocated_gib": 1.4641728401184082
+  }
+]

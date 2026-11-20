@@ -1,0 +1,28 @@
+[
+  {
+    "logits_dtype": "torch.bfloat16",
+    "official_loss_dtype": "torch.float32",
+    "official_mlm_loss": 1.123046875,
+    "full_fp32_mlm_loss": 1.123233675956726,
+    "partition_fp32_absolute_error": 0.0,
+    "official_vs_fp32_absolute_error": 0.00018680095672607422,
+    "official_matches_fp32_tolerance": false,
+    "forward_amp": "bf16",
+    "dataset": "piqa",
+    "id": "train:bc3fa4f7-4a8a-46c9-929a-bae8dd99ed84",
+    "probe_scope": "No-grad first-example forward; not a replay of an optimizer step"
+  },
+  {
+    "logits_dtype": "torch.float32",
+    "official_loss_dtype": "torch.float32",
+    "official_mlm_loss": 1.1213107109069824,
+    "full_fp32_mlm_loss": 1.1213107109069824,
+    "partition_fp32_absolute_error": 0.0,
+    "official_vs_fp32_absolute_error": 0.0,
+    "official_matches_fp32_tolerance": true,
+    "forward_amp": "none",
+    "dataset": "piqa",
+    "id": "train:bc3fa4f7-4a8a-46c9-929a-bae8dd99ed84",
+    "probe_scope": "No-grad first-example forward; not a replay of an optimizer step"
+  }
+]

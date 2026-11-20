@@ -1,0 +1,49 @@
+{
+  "seed": 42,
+  "best_epoch": 1,
+  "trainable_parameters": 131072,
+  "baseline_source_validation": {
+    "n": 1517,
+    "accuracy": 0.7620303230059328,
+    "macro_accuracy": 0.7641640069728257,
+    "macro_nll": 0.5800596779778437,
+    "per_dataset": {
+      "commonsenseqa": {
+        "n": 598,
+        "correct": 463,
+        "accuracy": 0.774247491638796,
+        "nll": 0.6139325798966716
+      },
+      "piqa": {
+        "n": 919,
+        "correct": 693,
+        "accuracy": 0.7540805223068553,
+        "nll": 0.5461867760590159
+      }
+    }
+  },
+  "best_source_validation": {
+    "n": 1517,
+    "accuracy": 0.7593935398813447,
+    "macro_accuracy": 0.7611115761278983,
+    "macro_nll": 0.5798074840070415,
+    "per_dataset": {
+      "commonsenseqa": {
+        "n": 598,
+        "correct": 460,
+        "accuracy": 0.7692307692307693,
+        "nll": 0.6112989975256804
+      },
+      "piqa": {
+        "n": 919,
+        "correct": 692,
+        "accuracy": 0.7529923830250272,
+        "nll": 0.5483159704884025
+      }
+    }
+  },
+  "delta_macro_pp": -0.3052430844927456,
+  "source_cal_used": false,
+  "target_data_used": false,
+  "synthetic_only": false
+}

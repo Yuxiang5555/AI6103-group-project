@@ -1,0 +1,251 @@
+{
+  "scope": "Source validation structural pilot, seed 42 only",
+  "lr": 0.0001,
+  "calibration_data_used": false,
+  "target_data_used": false,
+  "reference_dir": "runs/pilot_55518",
+  "mlm_cache_dir": "cache/mlm_pilot_55518_55555",
+  "projection_manifest": {
+    "transform": {
+      "kind": "frozen_official_mlm_predecoder_v1",
+      "official_mlm_class_sha256": "39de71d5e92f4bebf77a4c2cc29f16b7ac59e417ed77de8e81d7998414443f6b",
+      "converter_sha256": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a"
+    },
+    "verification": {
+      "passed": true,
+      "n_option_vectors": 8,
+      "scope": "Official MLM forward on cached vectors, not a fresh encoder forward"
+    },
+    "files": [
+      {
+        "file": "cache/mlm_pilot_55518_55555/piqa_train.pt",
+        "n": 2000,
+        "source_cache": "cache/pilot_55518/piqa_train.pt",
+        "source_cache_sha256": "0286925c09b3f1f6626cf16e8f2cd15ebd5d7d91841285dae7be065262b16ae4",
+        "base_logits_preserved": true,
+        "label_independent": true,
+        "input_hidden_dim": 4096,
+        "output_hidden_dim": 128,
+        "reconstructed_yes_mean_abs_error": 0.000193312406539917,
+        "reconstructed_yes_max_abs_error": 0.0009059906005859375,
+        "reconstructed_yes_prediction_agreement": 1.0,
+        "reconstruction_note": "Diagnostics use FP16 cached encoder vectors; original base logits are retained exactly.",
+        "official_mlm_verification": {
+          "passed": true,
+          "n_option_vectors": 8,
+          "scope": "Official MLM forward on cached vectors, not a fresh encoder forward"
+        }
+      },
+      {
+        "file": "cache/mlm_pilot_55518_55555/cqa_train.pt",
+        "n": 2000,
+        "source_cache": "cache/pilot_55518/cqa_train.pt",
+        "source_cache_sha256": "9b28696cc904261698c3c429df5d07076527db45c2c3ee2cbe417bf29a95e3d9",
+        "base_logits_preserved": true,
+        "label_independent": true,
+        "input_hidden_dim": 4096,
+        "output_hidden_dim": 128,
+        "reconstructed_yes_mean_abs_error": 0.00019620704650878906,
+        "reconstructed_yes_max_abs_error": 0.00109100341796875,
+        "reconstructed_yes_prediction_agreement": 1.0,
+        "reconstruction_note": "Diagnostics use FP16 cached encoder vectors; original base logits are retained exactly.",
+        "official_mlm_verification": {
+          "passed": true,
+          "n_option_vectors": 8,
+          "scope": "Official MLM forward on cached vectors, not a fresh encoder forward"
+        }
+      },
+      {
+        "file": "cache/mlm_pilot_55518_55555/piqa_val.pt",
+        "n": 919,
+        "source_cache": "cache/pilot_55518/piqa_val.pt",
+        "source_cache_sha256": "6d5691aa34c01f4612c64ec26ea1f1daacb56476cb718f34f49f4f3b8e201dd9",
+        "base_logits_preserved": true,
+        "label_independent": true,
+        "input_hidden_dim": 4096,
+        "output_hidden_dim": 128,
+        "reconstructed_yes_mean_abs_error": 0.00019601846804945722,
+        "reconstructed_yes_max_abs_error": 0.0008106231689453125,
+        "reconstructed_yes_prediction_agreement": 1.0,
+        "reconstruction_note": "Diagnostics use FP16 cached encoder vectors; original base logits are retained exactly.",
+        "official_mlm_verification": {
+          "passed": true,
+          "n_option_vectors": 8,
+          "scope": "Official MLM forward on cached vectors, not a fresh encoder forward"
+        }
+      },
+      {
+        "file": "cache/mlm_pilot_55518_55555/cqa_val.pt",
+        "n": 598,
+        "source_cache": "cache/pilot_55518/cqa_val.pt",
+        "source_cache_sha256": "2a70232832a74d5b82f350b0b8b67304cb983652d450d30a04ab876b915f988c",
+        "base_logits_preserved": true,
+        "label_independent": true,
+        "input_hidden_dim": 4096,
+        "output_hidden_dim": 128,
+        "reconstructed_yes_mean_abs_error": 0.00019358823131956782,
+        "reconstructed_yes_max_abs_error": 0.000865936279296875,
+        "reconstructed_yes_prediction_agreement": 1.0,
+        "reconstruction_note": "Diagnostics use FP16 cached encoder vectors; original base logits are retained exactly.",
+        "official_mlm_verification": {
+          "passed": true,
+          "n_option_vectors": 8,
+          "scope": "Official MLM forward on cached vectors, not a fresh encoder forward"
+        }
+      }
+    ]
+  },
+  "scripts_sha256": {
+    "project_mlm_features.py": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a",
+    "decision_head.py": "e309a72832e2a74c26944b26dd6ea0336d31d441cca88ea05036c75f8ba67398",
+    "train_head.py": "93bbf1663d7d2a615bff99665bd241664f9f4545b62eb428385cc3ff4eeb7c3e",
+    "data_io.py": "e3a8bdbc16a4cde5d1efe46c58069b2dcc9ac1e26ff1e88becb382fdc5a9598e"
+  },
+  "elapsed_seconds": 100,
+  "comparison": [
+    {
+      "representation": "baseline",
+      "mode": "baseline",
+      "model_dim": null,
+      "best_epoch": 0,
+      "parameter_count": 0,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800596810301617,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/pilot_55518"
+    },
+    {
+      "representation": "raw",
+      "mode": "mlp",
+      "model_dim": 256,
+      "best_epoch": 1,
+      "parameter_count": 1650177,
+      "piqa_accuracy": 0.750816104461371,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7625317980500835,
+      "macro_nll": 0.5802930002013486,
+      "delta_macro_pp": -0.16322089227421843,
+      "run_dir": "runs/pilot_55518/mlp_seed42_lr1e4"
+    },
+    {
+      "representation": "raw",
+      "mode": "self",
+      "model_dim": 256,
+      "best_epoch": 1,
+      "parameter_count": 1847553,
+      "piqa_accuracy": 0.7519042437431991,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7630758676909976,
+      "macro_nll": 0.5802422183691801,
+      "delta_macro_pp": -0.10881392818281599,
+      "run_dir": "runs/pilot_55518/self_seed42_lr1e4"
+    },
+    {
+      "representation": "raw",
+      "mode": "full",
+      "model_dim": 256,
+      "best_epoch": 3,
+      "parameter_count": 1847553,
+      "piqa_accuracy": 0.7519042437431991,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7630758676909976,
+      "macro_nll": 0.5870036322005904,
+      "delta_macro_pp": -0.10881392818281599,
+      "run_dir": "runs/pilot_55518/full_seed42_lr1e4"
+    },
+    {
+      "representation": "raw",
+      "mode": "mlp",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 308097,
+      "piqa_accuracy": 0.7529923830250272,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7636199373319117,
+      "macro_nll": 0.5801518480677494,
+      "delta_macro_pp": -0.05440696409140244,
+      "run_dir": "runs/compact_pilot_55518_55555/raw/mlp_seed42_lr1e4"
+    },
+    {
+      "representation": "raw",
+      "mode": "self",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 320577,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800903652814589,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/compact_pilot_55518_55555/raw/self_seed42_lr1e4"
+    },
+    {
+      "representation": "raw",
+      "mode": "full",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 320577,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800789186555151,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/compact_pilot_55518_55555/raw/full_seed42_lr1e4"
+    },
+    {
+      "representation": "mlm",
+      "mode": "mlp",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 46209,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800948568487374,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/compact_pilot_55518_55555/mlm/mlp_seed42_lr1e4"
+    },
+    {
+      "representation": "mlm",
+      "mode": "self",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 58689,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800650388996484,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/compact_pilot_55518_55555/mlm/self_seed42_lr1e4"
+    },
+    {
+      "representation": "mlm",
+      "mode": "full",
+      "model_dim": 64,
+      "best_epoch": 1,
+      "parameter_count": 58689,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800727680212894,
+      "delta_macro_pp": 0.0,
+      "run_dir": "runs/compact_pilot_55518_55555/mlm/full_seed42_lr1e4"
+    }
+  ],
+  "best_trained_on_source_val": {
+    "representation": "mlm",
+    "mode": "self",
+    "model_dim": 64,
+    "best_epoch": 1,
+    "parameter_count": 58689,
+    "piqa_accuracy": 0.7540805223068553,
+    "cqa_accuracy": 0.774247491638796,
+    "macro_accuracy": 0.7641640069728257,
+    "macro_nll": 0.5800650388996484,
+    "delta_macro_pp": 0.0,
+    "run_dir": "runs/compact_pilot_55518_55555/mlm/self_seed42_lr1e4"
+  },
+  "best_trained_above_baseline": false
+}

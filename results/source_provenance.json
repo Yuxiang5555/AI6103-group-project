@@ -1,0 +1,58 @@
+{
+  "original_python_files_preserved_byte_for_byte": {
+    "build_model_handoff.py": "853ca1b70afccbbe89b2bbbcf16243724d324d27ba0e4d764c2359bfc10194f8",
+    "center_option_features.py": "a5b5c316855f8c1b930c59505a4b50efc1ee435ce8739dad4c37364c3f0b32ae",
+    "collect_pilot_diagnostics.py": "2ec11cfd8bb6a5421387c5934e65723b3f5972c7b27343b05aa56715c85629b0",
+    "collect_unimc_lora.py": "6ecd37fb471deda4f2df366b5a8820a9184035dab701cf576c4f7ab21ef395a7",
+    "confirm_centering.py": "8b31035a386b562d62eae316756667a25cdfb607acd29c542ce9b7d4e708c2b2",
+    "data_io.py": "e3a8bdbc16a4cde5d1efe46c58069b2dcc9ac1e26ff1e88becb382fdc5a9598e",
+    "decision_head.py": "e309a72832e2a74c26944b26dd6ea0336d31d441cca88ea05036c75f8ba67398",
+    "diagnose_unimc_lora.py": "accf28d78d6543c858f74127e87c3d5101c1dee5f3780e609be7ac411ac6a9d3",
+    "extract_features.py": "18f994c2a9ef7f7131c7894bbeef4de7e2516c32137c3100dd85941c7a78b1d0",
+    "interaction_gate_head.py": "1d0270d75540b4b8b8633a84cc0d968458b07e9e696e85832f08cc63f61bd478",
+    "predict_head.py": "20ef68ff8acb8399e1e6bc60fc3f187d1735093014310b3898f2cf0e69f9c670",
+    "predict_interaction_gate.py": "961d8d0f24690abb8b9ccbe31ebb3dac6d97b09a591844eb71261fd2265b1040",
+    "predict_unimc_lora.py": "073f3e231e2af0d82640112abf79ee42b103d5b4675c2c57423425a1430642d7",
+    "prepare_data.py": "9840e86a3aeb010f7c7f4dae7dacd2c0ed2e0b31d2ca7a91d909191e41ce69e4",
+    "prepare_pilot_data.py": "065a179279c9800eb372a2fac406a511105823ed436e471a1dc06b2cc78a7f59",
+    "project_mlm_features.py": "49dfc4790715d1cf700ee5041cbfcc73f31e0dca917ff92f6950a822f058421a",
+    "run_interaction_gate.py": "b9780d9d3508cec8f58df20349eaa5c0a0ff9044778266c853434cc2905deb9b",
+    "run_unimc_lora.py": "5d508548f63d49334350edd3359e796030106ee759d01442adb60b89b5362d46",
+    "smoke_test.py": "17da615c67bafc3787d6048ac77293147954828126f0e12cbc522aed9ab98fcf",
+    "train_head.py": "93bbf1663d7d2a615bff99665bd241664f9f4545b62eb428385cc3ff4eeb7c3e",
+    "train_interaction_gate.py": "37e12d654b0046977f699e0de44d467d253422486e0fee2f26c05f1b97f11144",
+    "unimc_lora.py": "dee1583252d0d1a09cd00d83aab9e829a9d2c1d17d599b113884e819f73b10b5",
+    "unimc_online.py": "e6ca7bc5a7809f0a84a9bcbce875eefeb5e457bd78e04f9acc35bdc9f3c9a075"
+  },
+  "original_lora_run_definition_hashes": {
+    "unimc_lora.py": "dee1583252d0d1a09cd00d83aab9e829a9d2c1d17d599b113884e819f73b10b5",
+    "unimc_online.py": "e6ca7bc5a7809f0a84a9bcbce875eefeb5e457bd78e04f9acc35bdc9f3c9a075"
+  },
+  "original_lora_run_code_hashes": {
+    "unimc_lora.py": "dee1583252d0d1a09cd00d83aab9e829a9d2c1d17d599b113884e819f73b10b5",
+    "unimc_online.py": "e6ca7bc5a7809f0a84a9bcbce875eefeb5e457bd78e04f9acc35bdc9f3c9a075",
+    "run_unimc_lora.py": "5d508548f63d49334350edd3359e796030106ee759d01442adb60b89b5362d46",
+    "predict_unimc_lora.py": "073f3e231e2af0d82640112abf79ee42b103d5b4675c2c57423425a1430642d7",
+    "collect_unimc_lora.py": "6ecd37fb471deda4f2df366b5a8820a9184035dab701cf576c4f7ab21ef395a7"
+  },
+  "intentional_changes": [
+    "Optional test uses FENGSHEN_ROOT instead of a private Windows path.",
+    "Slurm log paths and working directories made relative; conda environment configurable.",
+    "Personal paths redacted from historical notes and exported result text; metrics unchanged."
+  ],
+  "slurm_templates": [
+    "build_model_handoff.sbatch",
+    "check_pilot_features.sbatch",
+    "check_unimc_lora.sbatch",
+    "confirm_centering.sbatch",
+    "diagnose_unimc_lora.sbatch",
+    "recover_centering.sbatch",
+    "recover_interaction_gate.sbatch",
+    "run_centered_heads.sbatch",
+    "run_compact_heads.sbatch",
+    "run_interaction_gate.sbatch",
+    "run_pilot_experiment.sbatch",
+    "train_unimc_lora.sbatch",
+    "tune_pilot_heads.sbatch"
+  ]
+}

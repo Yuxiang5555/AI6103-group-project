@@ -1,0 +1,53 @@
+{
+  "scope": "Source validation pilot; not target zero-shot results",
+  "seed": 42,
+  "lr": 0.0001,
+  "elapsed_seconds": 347,
+  "prediction_root": "predictions/pilot_55518",
+  "comparison": [
+    {
+      "mode": "baseline",
+      "best_epoch": 0,
+      "piqa_accuracy": 0.7540805223068553,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7641640069728257,
+      "macro_nll": 0.5800596810301617,
+      "delta_macro_pp": 0.0,
+      "corrected_vs_baseline": 0,
+      "harmed_vs_baseline": 0
+    },
+    {
+      "mode": "mlp",
+      "best_epoch": 1,
+      "piqa_accuracy": 0.750816104461371,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7625317980500835,
+      "macro_nll": 0.5802930002013486,
+      "delta_macro_pp": -0.16322089227421843,
+      "corrected_vs_baseline": 0,
+      "harmed_vs_baseline": 3
+    },
+    {
+      "mode": "self",
+      "best_epoch": 1,
+      "piqa_accuracy": 0.7519042437431991,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7630758676909976,
+      "macro_nll": 0.5802422183691801,
+      "delta_macro_pp": -0.10881392818281599,
+      "corrected_vs_baseline": 1,
+      "harmed_vs_baseline": 3
+    },
+    {
+      "mode": "full",
+      "best_epoch": 3,
+      "piqa_accuracy": 0.7519042437431991,
+      "cqa_accuracy": 0.774247491638796,
+      "macro_accuracy": 0.7630758676909976,
+      "macro_nll": 0.5870036322005904,
+      "delta_macro_pp": -0.10881392818281599,
+      "corrected_vs_baseline": 27,
+      "harmed_vs_baseline": 29
+    }
+  ]
+}

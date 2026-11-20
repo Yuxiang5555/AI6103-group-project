@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "scope": "Memory/gradient feasibility; two optimizer steps, not a performance experiment",
+  "base_signature": {
+    "hidden_dim": 4096,
+    "weights_sha256": {
+      "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+    },
+    "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+    "tokenizer_sha256": {
+      "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+      "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+    },
+    "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+    "max_length": 512,
+    "amp": "none",
+    "cached_hidden_dtype": "float16",
+    "yes_token": 1643,
+    "allow_option_truncation": true
+  },
+  "source_data_sha256": {
+    "data/pilot_seed42_v2/piqa/train.jsonl": "7b4ab07eddddeac01eb56db1a1fab8f2ba9ecd886d9e0a5fc8028fc98a948514",
+    "data/pilot_seed42_v2/cqa/train.jsonl": "c9d8f65539f2426e962bb8f5b2c35a5db8218d78a3d147f0930148364b28fb22",
+    "data/pilot_seed42_v2/piqa/val.jsonl": "00428950d00956d0f743f9436726af238276c7585b01e9779d7082948cf585d2",
+    "data/pilot_seed42_v2/cqa/val.jsonl": "19d3371cc533cddb9eb553bb81fe9b11affa68a0c5722b0429eea9f287c01242"
+  },
+  "code_sha256": {
+    "unimc_lora.py": "dee1583252d0d1a09cd00d83aab9e829a9d2c1d17d599b113884e819f73b10b5",
+    "unimc_online.py": "e6ca7bc5a7809f0a84a9bcbce875eefeb5e457bd78e04f9acc35bdc9f3c9a075",
+    "run_unimc_lora.py": "5d508548f63d49334350edd3359e796030106ee759d01442adb60b89b5362d46",
+    "predict_unimc_lora.py": "073f3e231e2af0d82640112abf79ee42b103d5b4675c2c57423425a1430642d7",
+    "collect_unimc_lora.py": "6ecd37fb471deda4f2df366b5a8820a9184035dab701cf576c4f7ab21ef395a7"
+  },
+  "adapter_options": {
+    "rank": 8,
+    "alpha": 16.0,
+    "dropout": 0.05
+  },
+  "amp": "bf16",
+  "micro_batch": 1,
+  "max_length": 512,
+  "gradient_checkpointing": true,
+  "adapter_spec": {
+    "targets": [
+      {
+        "name": "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query",
+        "in_features": 4096,
+        "out_features": 4096,
+        "rank": 8,
+        "alpha": 16.0,
+        "dropout": 0.05
+      },
+      {
+        "name": "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value",
+        "in_features": 4096,
+        "out_features": 4096,
+        "rank": 8,
+        "alpha": 16.0,
+        "dropout": 0.05
+      }
+    ],
+    "physical_adapters": 2,
+    "trainable_parameters": 131072
+  },
+  "checkpointed_physical_groups": [
+    "bert.albert.encoder.albert_layer_groups.0"
+  ],
+  "initialization_parity": {
+    "n": 8,
+    "zero_adapter_exactly_preserves_base": true,
+    "max_original_export_logit_error": 3.24249267578125e-05
+  },
+  "base_parameters_unchanged": true,
+  "changed_adapter_parameters": [
+    "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_A",
+    "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_B",
+    "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_A",
+    "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_B"
+  ],
+  "padded_probe_sequence_length": 512,
+  "steps": [
+    {
+      "step": 1,
+      "loss": 1.4050612449645996,
+      "seconds": 1.5580110151786357,
+      "adapter_gradient_norms": {
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_A": 0.0,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_B": 0.3341614902019501,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_A": 0.0,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_B": 0.8648340702056885
+      }
+    },
+    {
+      "step": 2,
+      "loss": 1.3445130586624146,
+      "seconds": 0.24116037087514997,
+      "adapter_gradient_norms": {
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_A": 0.02456546761095524,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.query.lora_B": 0.35259392857551575,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_A": 0.0948706865310669,
+        "bert.albert.encoder.albert_layer_groups.0.albert_layers.0.attention.value.lora_B": 0.7995463013648987
+      }
+    }
+  ],
+  "peak_gpu_allocated_gib": 1.5545415878295898,
+  "gpu": "NVIDIA A40",
+  "source_cal_used": false,
+  "target_data_used": false,
+  "torch": "2.5.1"
+}

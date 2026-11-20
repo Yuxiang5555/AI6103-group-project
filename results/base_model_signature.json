@@ -1,0 +1,35 @@
+{
+  "model": "IDEA-CCNL/Erlangshen-UniMC-Albert-235M-English",
+  "revision": "e3aeebc7bd475d559bd0cbd8d17abf4e159d1260",
+  "feature_signature": {
+    "hidden_dim": 4096,
+    "weights_sha256": {
+      "pytorch_model.bin": "96b426d4f012d35bc012259bd99b2a55d635214ff3b2a1f6df42a31c83168e08"
+    },
+    "config_sha256": "8c008d9c0b8e95f87b4bca61dbaff9993aea4a81c21d129e515bf3588d715926",
+    "tokenizer_sha256": {
+      "spiece.model": "fefb02b667a6c5c2fe27602d28e5fb3428f66ab89c7d6f388e7c8d44a02d0336",
+      "tokenizer.json": "769cfa7f8c60f978395ce84dd18106457d53d9d47d4366d5edfc490a67ef514c"
+    },
+    "encoding_sha256": "79cb9e0d2141280aae57194083cd642bfb4ad63c19234324445a215163c79d41",
+    "max_length": 512,
+    "amp": "none",
+    "cached_hidden_dtype": "float16",
+    "yes_token": 1643,
+    "allow_option_truncation": true
+  },
+  "recorded_environment": {
+    "python": "3.10.22",
+    "torch": "2.5.1",
+    "cuda_runtime": "12.4",
+    "transformers": "4.20.1",
+    "pytorch-lightning": "1.9.5",
+    "torchmetrics": "0.11.4",
+    "sentencepiece": "0.1.99",
+    "protobuf": "3.20.3",
+    "huggingface-hub": "0.25.2",
+    "jieba": "0.42.1",
+    "numpy": "1.26.4"
+  },
+  "upstream_fengshen_git_commit": null
+}
