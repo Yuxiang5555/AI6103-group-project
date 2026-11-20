@@ -1,16 +1,18 @@
 # 发布到 GitHub：本机操作步骤
 
-仓库建议命名为 `unimc-model-optimization`。建议课程项目协作阶段先建 Private 仓库，邀请组员，再由团队决定何时公开和采用什么许可证。
+远程仓库已命名为 [Yuxiang5555/AI6103-group-project](https://github.com/Yuxiang5555/AI6103-group-project)。本地文件夹仍可叫 `unimc-model-optimization`，不需要因为远程名称变化而移动或重命名目录。建议课程项目协作阶段先使用 Private 仓库，邀请组员，再由团队决定何时公开和采用什么许可证。
 
 当前目录已整理源码、历史实验说明、英文首页、三种子结果、Gate、LoRA、诊断、图表、依赖和 CPU CI。23 个原始根目录 Python 文件保持原始字节，原研究目录没有修改。数据、基座权重、缓存和个人交接包不在普通 Git 文件中。
 
 ## 1. 创建 GitHub 空仓库
 
-在 [GitHub 新建仓库页面](https://github.com/new) 选择账号和名称 `unimc-model-optimization`。选择 Private；不要让 GitHub 初始化 README、`.gitignore` 或 LICENSE，因为本地已有对应内容或许可状态说明。
+远程空仓库已经创建；无需再次新建。若以后从头操作，可在 [GitHub 新建仓库页面](https://github.com/new) 选择名称 `AI6103-group-project`，不要初始化 README、`.gitignore` 或 LICENSE，因为本地已有对应内容或许可状态说明。
 
-创建完成后复制仓库的 HTTPS 地址，例如 `https://github.com/YOUR_USERNAME/unimc-model-optimization.git`。
+本项目的 HTTPS 地址为 `https://github.com/Yuxiang5555/AI6103-group-project.git`。
 
 ## 2. 在本机 Windows PowerShell 初始化
+
+当前工作区已经完成本节的初始化和首次提交，无需重复。若使用ZIP解压到一个新目录，再执行本节。
 
 下面必须在这份独立仓库目录运行，不要在包含其他课程实验的工作区根目录运行 `git add .`：
 
@@ -35,15 +37,15 @@ git config user.email "YOUR_GITHUB_EMAIL"
 
 ## 3. 连接并推送
 
-把下面的 `YOUR_USERNAME` 换成自己的账号，或者直接使用刚复制的仓库地址：
+如果本地已有指向旧名称的 origin，更新地址：
 
 ```powershell
-git remote add origin https://github.com/YOUR_USERNAME/unimc-model-optimization.git
+git remote set-url origin https://github.com/Yuxiang5555/AI6103-group-project.git
 git remote -v
 git push -u origin main
 ```
 
-HTTPS 推送需要 GitHub 认证，按 Git Credential Manager/浏览器提示登录自己的账号即可；不要在脚本里写密码或 token。当前本机没有 GitHub CLI，所以本指南不依赖 `gh`。
+如果是在没有 origin 的全新本地副本中，改用 `git remote add origin https://github.com/Yuxiang5555/AI6103-group-project.git`。HTTPS 推送需要 GitHub 认证，按 Git Credential Manager/浏览器提示登录自己的账号即可；不要在脚本里写密码或 token。当前本机没有 GitHub CLI，所以本指南不依赖 `gh`。
 
 ## 4. 页面检查与协作
 
@@ -67,4 +69,4 @@ git push
 
 GitHub 普通 Git 文件超过100 MiB会被阻止，网页上传单文件限制25 MiB。参考 [GitHub 大文件说明](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)。本模板的文件远小于这些限制。
 
-完整流程依据 [GitHub 官方本地项目上传指南](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=windows)。这份目录尚未创建远程仓库、提交或推送；这些操作由你按上述步骤完成。
+完整流程依据 [GitHub 官方本地项目上传指南](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=windows)。当前工作区已有首次提交和仓库名称更新提交；origin 已改为新仓库地址。本次整理未执行推送。

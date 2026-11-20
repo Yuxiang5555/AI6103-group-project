@@ -1,6 +1,6 @@
-# UniMC Model Optimization
+# AI6103 Group Project — UniMC Model Optimization
 
-An experimental study of residual option scoring, option centering, interaction gating, and LoRA adaptation for the English UniMC ALBERT model.
+The model-optimization component of [AI6103-group-project](https://github.com/Yuxiang5555/AI6103-group-project): an experimental study of residual option scoring, option centering, interaction gating, and LoRA adaptation for the English UniMC ALBERT model.
 
 This repository contains the model-optimization part of the project: implementation, CPU contract tests, Slurm recipes, source-development results, and diagnostic reports. Calibration/rejection fitting and final independent-target evaluation are separate downstream tasks.
 
