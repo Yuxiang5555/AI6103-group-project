@@ -39,7 +39,8 @@
     "Optional test uses FENGSHEN_ROOT instead of a private Windows path.",
     "Slurm log paths and working directories made relative; conda environment configurable.",
     "Personal paths redacted from historical notes and exported result text; metrics unchanged.",
-    "Relocated the complete component without changing implementation bytes; consolidated documentation and figure folders."
+    "Relocated the complete component without changing implementation bytes; consolidated documentation and figure folders.",
+    "Added 24 audited small checkpoints under models/; original artifact backups retained and no checkpoint bytes changed."
   ],
   "slurm_templates": [
     "build_model_handoff.sbatch",

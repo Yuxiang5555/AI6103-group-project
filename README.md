@@ -50,6 +50,7 @@ AI6103-group-project/
     │   ├── HISTORICAL_RUN_GUIDE_ZH.md
     │   └── figures/
     ├── results/                 JSON/CSV evidence and provenance
+    ├── models/                  24 audited small heads/adapters and a checksum manifest
     ├── tests/                   CPU contract tests
     ├── slurm/                   Batch templates
     ├── tools/                   Pinned backbone download
@@ -64,7 +65,9 @@ describe distinct minimal-CPU and legacy-UniMC environments.
 
 Original Python implementation files inside `unimc_model_optimization/` retain their exact research-run bytes, including line endings, because checkpoints and feature caches verify implementation hashes. `.gitattributes` prevents Git from silently normalizing Python files. Only an optional test's private workstation fallback was replaced with `FENGSHEN_ROOT`. Slurm working-directory/log settings and historical notes were made portable. Changes are recorded in [source provenance](unimc_model_optimization/results/source_provenance.json).
 
-Weights, feature caches, raw/prepared datasets, predictions, and private handoff archives are excluded from normal Git tracking. The repository is a source-and-evidence release, not a copy of an entire server account or the third-party backbone.
+The [trained-module folder](unimc_model_optimization/models/README.md) contains 24 audited small checkpoints (about 6.37 MB total): 18 residual heads, three interaction-Gate heads, and initial/best/final seed42 LoRA adapters. The three centered-full heads are the main candidates. SHA256 digests, feature signatures, epochs, and validation metrics are recorded in [the model manifest](unimc_model_optimization/models/manifest.json).
+
+Original UniMC backbone weights, feature caches, raw/prepared datasets, predictions, and private handoff archives remain excluded from normal Git tracking. These small module files still require the matching external backbone and representation pipeline for inference.
 
 ## Quick start: CPU checks
 

@@ -124,7 +124,7 @@ Submit from the `unimc_model_optimization/` component directory after creating `
 
 Source implementations are byte-preserved in Git because checkpoints contain SHA signatures. Avoid automatic Python line-ending conversion or formatting when loading archived models. If code changes intentionally, retrain or regenerate compatible artifacts rather than weakening checks.
 
-Small metric exports are included; raw weights, signed training checkpoints, feature caches, calibration logits, and full handoff archives must be acquired separately. Trained adapters alone are insufficient for inference: the matching backbone and official encoder are also required.
+Small metric exports and 24 audited module checkpoints are included. See [the trained-module guide](../models/README.md) and [checksum manifest](../models/manifest.json). The original backbone weights, feature caches, calibration logits, and full handoff archives must be acquired separately. Trained heads/adapters alone are insufficient for inference: the matching backbone and official encoder are also required.
 
 ## GitHub publication instructions
 
@@ -193,7 +193,7 @@ git push
 
 ### 5. 大文件与交接包
 
-普通仓库保留源码、表格和图。基座约826 MB，应通过 Hugging Face 下载；缓存和数据通过准备脚本重建。已有训练头、adapter 或交接包如需分发，可由团队另行放到适当的附件/Release 存储，记录版本与SHA，不要直接取消全部忽略规则。
+普通仓库保留源码、表格、图，以及 `models/` 清单列出的24个小型检查点。基座约826 MB，应通过 Hugging Face 下载；缓存和数据通过准备脚本重建。只有明确列出的head/adapter文件允许Git追踪，基座、缓存和完整交接包仍使用单独存储，不要取消全部忽略规则。
 
 GitHub 普通 Git 文件超过100 MiB会被阻止，网页上传单文件限制25 MiB。参考 [GitHub 大文件说明](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)。本模板的文件远小于这些限制。
 
@@ -209,7 +209,7 @@ Checked locally on 20 November 2026:
 - The 23 original root Python implementations retain their original byte hashes.
 - A temporary Git repository confirmed that Python bytes survive staging even with `core.autocrlf=true` because of `.gitattributes`.
 - Actual Git ignore checks excluded representative weights, caches, data, predictions, logs, and environment files, while keeping synthetic examples and result exports.
-- No private machine identifiers, model-weight files, oversized files, or missing local Markdown link targets were found in the source package.
+- The initial source-only package contained no private machine identifiers, model-weight files, oversized files, or missing local Markdown link targets. The later trained-module addition is documented below.
 
 GitHub-hosted Actions has not yet run, and GPU experiments were not rerun during repository preparation. These checks validate the source packaging and local CPU behavior; the recorded research results retain their original experimental scope.
 
@@ -244,3 +244,13 @@ transformers was unavailable locally. The synthetic smoke test and all 13 Slurm
 syntax checks passed. A temporary Git repository also verified the new ignore
 rules and Python-byte preservation. GitHub-hosted Actions status was not checked
 during this restructuring; GPU experiments were not rerun.
+
+## Included checkpoint verification
+
+The component now contains 18 residual-head checkpoints, three interaction-Gate
+checkpoints, and three seed42 LoRA adapter snapshots under `models/`, totaling
+6,371,568 bytes. Each copied file matches its original SHA256. All 21 head/Gate
+models passed strict state loading and a small CPU inference probe with finite
+valid logits and excluded padding. The three LoRA snapshots passed finite-tensor,
+shape, parameter-count, and implementation-signature checks. No full-backbone
+replay or new training was performed. The original `output/` backups were kept.
