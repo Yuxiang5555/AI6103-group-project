@@ -1,6 +1,6 @@
 # 汇总实验组 · 独立目标评估
 
-已准备 11,070 道带标签的公开验证题，构造 42,336 条原题及扰动输入。逐条检查通过，覆盖原题 ID、选项回映、正确标签、删除条件和数据哈希。当前没有收到优化组的固定评分头或目标预测，目标准确率、扰动后的性能及拒识结果仍待实测。
+已准备 11,070 道带标签的公开验证题，构造 42,336 条原题及扰动输入。逐条检查通过，覆盖原题 ID、选项回映、正确标签、删除条件和数据哈希。本实验所需的 12 个评分头已发布在 `unimc_model_optimization/models/heads/`。这套评分头的目标准确率、扰动后的性能及拒识结果仍待实测。四源 v0.3 决策层（种子 0/1/2）已有[独立评估和校准结果](../calibration/results/report.md)，其温度只适用于对应模型。
 
 | 公开验证集 | 原题 | 轮换顺序 | 删除一个干扰项 | 删除标注正确项 |
 |---|---:|---:|---:|---:|
@@ -18,10 +18,10 @@
 python aggregate_eval/prepare_targets.py --output data/aggregate_targets
 ```
 
-如果收到的是含数据的 `UniMC_target_eval.zip`，解压后直接进入 `UniMC_target_eval` 目录即可。随后在分配到的 GPU 节点上激活训练时的 UniMC 环境，从项目根目录运行以下命令。三个参数依次是含 `model_manifest.json` 的交接目录、含 `config.json` 的原版基座目录、含 `fengshen/` 的源码目录。把示意路径替换成服务器上的实际路径。
+如果收到的是含数据的 `UniMC_target_eval.zip`，解压后直接进入 `UniMC_target_eval` 目录即可。随后在分配到的 GPU 节点上激活训练时的 UniMC 环境，从项目根目录运行以下命令。两个参数依次是含 `config.json` 的原版基座目录和含 `fengshen/` 的源码目录。默认从仓库读取评分头。旧交接目录也可作为额外的第一个参数。把示意路径替换成服务器上的实际路径。
 
 ```bash
-python aggregate_eval/run_and_pack.py /path/to/handoff /path/to/unimc-albert-235m /path/to/Fengshenbang-LM
+python aggregate_eval/run_and_pack.py /path/to/unimc-albert-235m /path/to/Fengshenbang-LM
 ```
 
 脚本使用已有权重推理。成功后请回传 `output/UniMC_target_results.tar.gz`。包中含 52 份逐题预测、4 份任务完成记录、数据清单和汇总报告。若作业中断，在同一目录执行原命令会复用已完成且校验通过的任务。若报错，请保留作业日志以便定位。
@@ -45,11 +45,11 @@ python aggregate_eval/prepare_targets.py --output data/aggregate_targets
 python -m unittest discover -s aggregate_eval -v
 ```
 
-在有官方 UniMC 环境及 CUDA 的计算节点运行以下命令。HANDOFF 是交接包解压后含 model_manifest.json 和 models/ 的目录，BASE 和 FENGSHEN 分别指向历史实验所用的基座与编码器。每个任务分别检查权重哈希、原版预测一致性及缓存签名，成功后才发布该任务的逐题输出。重复执行会验证并复用已完成任务。
+在有官方 UniMC 环境及 CUDA 的计算节点运行以下命令。BASE 和 FENGSHEN 分别指向历史实验所用的基座与编码器。每个任务分别检查权重哈希、原版预测一致性及缓存签名，成功后才发布该任务的逐题输出。重复执行会验证并复用已完成任务。
 
 ```bash
 python aggregate_eval/run_targets.py --inputs data/aggregate_targets \
-  --handoff "$HANDOFF" --model "$BASE" --fengshen-root "$FENGSHEN" \
+  --model "$BASE" --fengshen-root "$FENGSHEN" \
   --out predictions/aggregate_targets
 python aggregate_eval/summarize.py --inputs data/aggregate_targets \
   --predictions predictions/aggregate_targets --output output/aggregate_targets

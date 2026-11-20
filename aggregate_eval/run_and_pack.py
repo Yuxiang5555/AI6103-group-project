@@ -6,16 +6,19 @@ import sys
 import tarfile
 import tempfile
 
-from run_targets import MODELS, ROOT, SOURCES
+from run_targets import COMP, MODELS, ROOT, SOURCES
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("handoff", type=Path, help="Directory containing model_manifest.json and models/")
+    p.add_argument("handoff", type=Path, nargs="?", default=COMP / "models",
+                   help="Optional model directory. Defaults to the audited repository heads.")
     p.add_argument("base", type=Path, help="Local UniMC ALBERT backbone directory")
     p.add_argument("fengshen", type=Path, help="Matching Fengshen checkout")
     args = p.parse_args()
-    for path in (args.handoff / "model_manifest.json", args.base / "config.json",
+    if not any((args.handoff / name).is_file() for name in ("manifest.json", "model_manifest.json")):
+        p.error(f"Missing checkpoint manifest in {args.handoff}")
+    for path in (args.base / "config.json",
                  args.fengshen / "fengshen"):
         if not path.exists():
             p.error(f"Missing required path: {path}")

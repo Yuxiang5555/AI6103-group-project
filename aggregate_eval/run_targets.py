@@ -32,23 +32,36 @@ def run(script, *args):
     subprocess.run([sys.executable, str(COMP / script), *map(str, args)], check=True)
 
 
+def verified_heads(folder, expected):
+    legacy = folder / "model_manifest.json"
+    if legacy.is_file():
+        handoff = read(legacy)
+        if expected != handoff["raw_feature_signature"]:
+            raise ValueError("Handoff backbone signature differs from the archived experiment")
+        entries, directory = handoff["models"], "models"
+    else:
+        entries, directory = read(folder / "manifest.json")["files"], "heads"
+    by_file = {m["file"]: m["sha256"] for m in entries}
+    paths, hashes = {}, {}
+    for name in MODELS[1:]:
+        relative = f"{directory}/{name}.pt"
+        paths[name] = folder / relative
+        hashes[name] = sha(paths[name])
+        if hashes[name] != by_file[relative]:
+            raise ValueError(f"Model hash mismatch: {name}")
+    return paths, hashes
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("inputs", "handoff", "model", "fengshen-root", "out"):
+    for name in ("inputs", "model", "fengshen-root", "out"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--handoff", type=Path, default=COMP / "models",
+                        help="Audited model directory or original private handoff directory")
     args = parser.parse_args()
     manifest = read(args.inputs / "manifest.json")
-    handoff = read(args.handoff / "model_manifest.json")
-    models = {Path(m["file"]).stem: m for m in handoff["models"]}
-    hashes = {}
-    for name in MODELS[1:]:
-        checkpoint = args.handoff / "models" / (name + ".pt")
-        hashes[name] = sha(checkpoint)
-        if hashes[name] != models[name]["sha256"]:
-            raise ValueError(f"Model hash mismatch: {name}")
     expected = read(COMP / "results/base_model_signature.json")["feature_signature"]
-    if expected != handoff["raw_feature_signature"]:
-        raise ValueError("Handoff backbone signature differs from the archived experiment")
+    checkpoints, hashes = verified_heads(args.handoff, expected)
     args.out.mkdir(parents=True, exist_ok=True)
     for task in SOURCES:
         inp = args.inputs / (task + ".jsonl")
@@ -85,7 +98,7 @@ def main():
                     cache, flags = raw, ["--baseline"]
                 else:
                     cache = mlm if name.startswith("uncentered_") else work / "centered" / "raw.pt"
-                    flags = ["--checkpoint", args.handoff / "models" / (name + ".pt")]
+                    flags = ["--checkpoint", checkpoints[name]]
                 run("predict_head.py", "--cache", cache, *flags, "--device", "cuda:0",
                     "--output", results / (name + ".jsonl"))
             record = dict(fingerprint=fingerprint, extraction=meta,
