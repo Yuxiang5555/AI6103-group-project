@@ -1,0 +1,136 @@
+nohup: ignoring input
+model loaded: hidden=4096, yes_token=1643, device=cuda, dtype=bf16
+arc_c      calib  n=   112  baseline acc=0.5446  (1s, 83.9 samples/s)
+arc_c      test   n=   299  baseline acc=0.5552  (3s, 117.8 samples/s)
+arc_c      test_official n=  1172  baseline acc=0.5358  (9s, 124.0 samples/s)
+arc_c      train  n=   895  baseline acc=0.5810  (7s, 123.5 samples/s)
+arc_c      val    n=   112  baseline acc=0.6071  (1s, 88.3 samples/s)
+cb         test   n=    56  baseline acc=0.6429  (2s, 37.1 samples/s)
+copa       test   n=   100  baseline acc=0.9700  (1s, 171.3 samples/s)
+csqa       calib  n=   974  baseline acc=0.7690  (4s, 228.9 samples/s)
+csqa       test   n=  1221  baseline acc=0.7748  (5s, 236.3 samples/s)
+csqa       train  n=  7793  baseline acc=0.7611  (32s, 244.3 samples/s)
+csqa       val    n=   974  baseline acc=0.7700  (4s, 238.5 samples/s)
+hellaswag  test   n= 10042  baseline acc=0.5696  (168s, 59.9 samples/s)
+obqa       calib  n=   496  baseline acc=0.7641  (2s, 212.7 samples/s)
+obqa       test   n=   500  baseline acc=0.6460  (3s, 184.7 samples/s)
+obqa       test_official n=   500  baseline acc=0.6600  (3s, 192.1 samples/s)
+obqa       train  n=  3965  baseline acc=0.7533  (19s, 211.5 samples/s)
+obqa       val    n=   496  baseline acc=0.6996  (3s, 176.3 samples/s)
+piqa       calib  n=  1611  baseline acc=0.7716  (22s, 71.7 samples/s)
+piqa       test   n=  1838  baseline acc=0.7291  (26s, 69.8 samples/s)
+piqa       train  n= 12891  baseline acc=0.7615  (183s, 70.3 samples/s)
+piqa       val    n=  1611  baseline acc=0.7480  (23s, 69.3 samples/s)
+sst2       test   n=   872  baseline acc=0.9186  (5s, 190.9 samples/s)
+{
+ "arc_c/calib": {
+  "n": 112,
+  "baseline_acc": 0.5446428656578064,
+  "sec": 1.3355011940002441
+ },
+ "arc_c/test": {
+  "n": 299,
+  "baseline_acc": 0.5551839470863342,
+  "sec": 2.5373318195343018
+ },
+ "arc_c/test_official": {
+  "n": 1172,
+  "baseline_acc": 0.5358361601829529,
+  "sec": 9.449386835098267
+ },
+ "arc_c/train": {
+  "n": 895,
+  "baseline_acc": 0.5810055732727051,
+  "sec": 7.2495434284210205
+ },
+ "arc_c/val": {
+  "n": 112,
+  "baseline_acc": 0.6071428656578064,
+  "sec": 1.2676973342895508
+ },
+ "cb/test": {
+  "n": 56,
+  "baseline_acc": 0.6428571343421936,
+  "sec": 1.5107331275939941
+ },
+ "copa/test": {
+  "n": 100,
+  "baseline_acc": 0.9700000286102295,
+  "sec": 0.5838942527770996
+ },
+ "csqa/calib": {
+  "n": 974,
+  "baseline_acc": 0.7689938545227051,
+  "sec": 4.25601601600647
+ },
+ "csqa/test": {
+  "n": 1221,
+  "baseline_acc": 0.7747747898101807,
+  "sec": 5.167304992675781
+ },
+ "csqa/train": {
+  "n": 7793,
+  "baseline_acc": 0.7610676288604736,
+  "sec": 31.898079872131348
+ },
+ "csqa/val": {
+  "n": 974,
+  "baseline_acc": 0.7700205445289612,
+  "sec": 4.0840911865234375
+ },
+ "hellaswag/test": {
+  "n": 10042,
+  "baseline_acc": 0.569607675075531,
+  "sec": 167.56546425819397
+ },
+ "obqa/calib": {
+  "n": 496,
+  "baseline_acc": 0.7641128897666931,
+  "sec": 2.3318824768066406
+ },
+ "obqa/test": {
+  "n": 500,
+  "baseline_acc": 0.6460000276565552,
+  "sec": 2.707059383392334
+ },
+ "obqa/test_official": {
+  "n": 500,
+  "baseline_acc": 0.6600000262260437,
+  "sec": 2.6021881103515625
+ },
+ "obqa/train": {
+  "n": 3965,
+  "baseline_acc": 0.7533417344093323,
+  "sec": 18.74397039413452
+ },
+ "obqa/val": {
+  "n": 496,
+  "baseline_acc": 0.6995967626571655,
+  "sec": 2.8129851818084717
+ },
+ "piqa/calib": {
+  "n": 1611,
+  "baseline_acc": 0.7715704441070557,
+  "sec": 22.46385884284973
+ },
+ "piqa/test": {
+  "n": 1838,
+  "baseline_acc": 0.7290533185005188,
+  "sec": 26.34804940223694
+ },
+ "piqa/train": {
+  "n": 12891,
+  "baseline_acc": 0.7614614963531494,
+  "sec": 183.36438584327698
+ },
+ "piqa/val": {
+  "n": 1611,
+  "baseline_acc": 0.7479826211929321,
+  "sec": 23.230298042297363
+ },
+ "sst2/test": {
+  "n": 872,
+  "baseline_acc": 0.9185779690742493,
+  "sec": 4.568779945373535
+ }
+}

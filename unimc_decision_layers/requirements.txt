@@ -1,0 +1,7 @@
+torch>=2.1
+transformers>=4.40,<5
+sentencepiece
+datasets>=2.19
+scikit-learn
+numpy
+tqdm
