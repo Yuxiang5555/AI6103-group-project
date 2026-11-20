@@ -12,7 +12,7 @@
 #SBATCH --error=logs/%x_%j.err
 
 set -eo pipefail
-# Submit from repository root after: mkdir -p logs
+# Submit from unimc_model_optimization/ after: mkdir -p logs
 export MKL_THREADING_LAYER=GNU
 module load anaconda
 eval "$(conda shell.bash hook)"

@@ -6,6 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: unimc_model_optimization
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

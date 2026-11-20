@@ -31,3 +31,18 @@ venv/
 !examples/*.jsonl
 .DS_Store
 Thumbs.db
+
+# Component runtime artifacts and external siblings
+/Fengshenbang-LM-main/
+/unimc_model_optimization/models/
+/unimc_model_optimization/cache/
+/unimc_model_optimization/raw/
+/unimc_model_optimization/data/*
+!/unimc_model_optimization/data/README.md
+/unimc_model_optimization/runs/
+/unimc_model_optimization/predictions/
+/unimc_model_optimization/handoff/
+/unimc_model_optimization/logs/*
+!/unimc_model_optimization/logs/.gitkeep
+/unimc_model_optimization/output/
+!/unimc_model_optimization/examples/*.jsonl

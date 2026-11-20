@@ -38,7 +38,8 @@
   "intentional_changes": [
     "Optional test uses FENGSHEN_ROOT instead of a private Windows path.",
     "Slurm log paths and working directories made relative; conda environment configurable.",
-    "Personal paths redacted from historical notes and exported result text; metrics unchanged."
+    "Personal paths redacted from historical notes and exported result text; metrics unchanged.",
+    "Relocated the complete component without changing implementation bytes; consolidated documentation and figure folders."
   ],
   "slurm_templates": [
     "build_model_handoff.sbatch",
@@ -54,5 +55,16 @@
     "run_pilot_experiment.sbatch",
     "train_unimc_lora.sbatch",
     "tune_pilot_heads.sbatch"
-  ]
+  ],
+  "repository_component_directory": "unimc_model_optimization",
+  "documentation_layout": {
+    "technical_report": "docs/TECHNICAL_REPORT.md",
+    "operations": "docs/OPERATIONS.md",
+    "historical_notes": "docs/HISTORICAL_RUN_GUIDE_ZH.md",
+    "required_package_notes": [
+      "README_UniMC_LoRA实施.md",
+      "README_交互Gate实施.md",
+      "README_模型优化组交接.md"
+    ]
+  }
 }
